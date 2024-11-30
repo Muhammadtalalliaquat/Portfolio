@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Contact() {
-
-
   return (
     <>
       <Navbar />
@@ -35,10 +33,7 @@ export default function Contact() {
               height={30}
             />
             <Link
-              // href="https://www.linkedin.com/in/muhammad-talal-428699255/"
               href="https://www.linkedin.com/in/m-talalliaquat/"
-
-
               target="_blank"
               rel="noopener noreferrer"
             >

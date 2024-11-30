@@ -2,16 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  // images: {
-  //   remotePatterns: [
-  //     {
-  //       protocol: 'https',
-  //       hostname: 'media.licdn.com',
-  //       pathname: '/dms/image/**',
-  //     },
-  //   ],
-  //   domains: ['static.vecteezy.com' , 'cdn-icons-png.flaticon.com', 'i.ibb.co' , 'i.postimg.cc'],
-  // },
   images: {
     remotePatterns: [
       {
