@@ -1,0 +1,130 @@
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: var(--text-color);
+    background: var(--background);
+    /* background: linear-gradient(135deg, #8a2be2, #fad0c4, #fbc2eb); */
+  }
+
+  .menu {
+    display: flex;
+    color: var(--text-color);
+    list-style: none;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu li {
+    position: relative;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .menu li:hover {
+    background-color: #fad0c4;
+    color: var(--text-color);
+    color: #8a2be2;
+    border-radius: 5px;
+    transform: scale(1.05);
+  }
+  
+  .menu li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8a2be2;
+    transition: width 0.3s ease;
+  }
+  
+  .menu li:hover::after {
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--text-color);
+  }
+  
+  .menu li {
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+
+
+  .iconContanier{
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    background: var(--background);
+    color: var(--text-color);
+    /* color: #626262; */
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #0505ce;
+  }
+
+  @media (max-width: 768px) {
+    .menu {
+      opacity: 0;
+      transform: translateY(-20px);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: var(--background-color);
+      width: 100%;
+      border-radius: 8px;
+      padding: 1rem;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      color: var(--text-color);
+    }
+    
+    .menu_open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    
+    .hamburger {
+      display: block;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--text-color);
+      cursor: pointer;
+      width: 30px;
+      height: 24px;
+      transition: transform 0.3s ease;
+    }
+    
+  } 
+  
+  
+  
