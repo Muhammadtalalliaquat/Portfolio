@@ -11,6 +11,28 @@
 }
 
 
+/* Three dots styling */
+
+.lines {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+}
+
+.lines div {
+  width: 70px;
+  height: 4px;
+  background-color: #555;
+  border-radius: 2px; 
+}
+
+.lines .center_line {
+  background-color: blueviolet;
+}
+
+
 
 .proficiencyContainer {
   width: 90%;
@@ -102,20 +124,18 @@
     text-align: center;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background 0.4s ease, opacity 0.4s ease, color 0.4s ease;
-    /* box-shadow: var(--card-box-shadow-light); */
   }
   
   .projectCard:hover {
-    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background: var(--card-hover-bg-color);
     transform: translateY(-10px);
     opacity: 0.9; 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
-  
   .projectCard:hover::after {
     content: "";
     position: absolute;
@@ -134,7 +154,6 @@
     transition: opacity 0.4s ease;
   }
   
-
   .projectCard h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -207,16 +226,10 @@
 
   }
   
- 
-
-
-
-
 .errowSign {
     position: fixed;
     bottom: 20px;
     right: 20px; 
-    /* background-color: var(--primary-color); */
     background-color: #fff;
     border-radius: 50%; 
     width: 50px;
@@ -234,11 +247,13 @@
     transform: scale(1.1);
   }
  
-
-
-
-
-
+  .bottom_p{
+    font-size: 14px;
+    padding-bottom: 10px;
+    color: var(--text-color);
+    font-size: 10px;
+    text-align: center;
+  }
 
 
   @media screen and (max-width: 768px) {

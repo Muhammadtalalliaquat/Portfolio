@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import styles from "./../components/main.module.css";
 import { useState } from "react";
 import { useTheme } from "./../context/themeContext";
 
-function Navbar() {
+function Navbar({ onScroll, sections }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isDarkTheme, themeToggle } = useTheme();
 
@@ -14,20 +13,11 @@ function Navbar() {
   };
 
   return (
-    <div
-      className={styles.navbar}
-      // className={`${styles.navbar} ${isDarkTheme ? styles.dark : styles.light}`}
-    >
+    <div className={styles.navbar}>
       <div>
         <span className={styles.btn}>Portfolio</span>
       </div>
       <div className={styles.flex_none}>
-        {/* <button 
-         className={styles.hamburger} 
-         onClick={toggleMenubar}
-         aria-label="Toggle menu">
-          {isMenuOpen ? "X" : "☰"}
-        </button> */}
         <button
           className={styles.hamburger}
           onClick={toggleMenubar}
@@ -39,18 +29,18 @@ function Navbar() {
         </button>
 
         <ul className={`${styles.menu} ${isMenuOpen ? styles.menu_open : ""}`}>
-          <li>
-            <Link href="/">
-              <span>Home</span>
-            </Link>
+          <li
+            onClick={() => {
+              onScroll(sections.acheievemnet);
+            }}
+          >
+            <span>Achievements</span>
           </li>
-          <li>
+          <li onClick={() => onScroll(sections.projects)}>
             <span>Projects</span>
           </li>
-          <li>
-            <Link href="/contact">
-              <span>Contact</span>
-            </Link>
+          <li onClick={() => onScroll(sections.contact)}>
+            <span>Contact</span>
           </li>
           <li>
             <label className="swap swap-rotate">
