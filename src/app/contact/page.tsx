@@ -5,14 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 type scrollsectionType = {
-  id: string;
-  ref?: React.Ref<HTMLDivElement>;
+  scrollId: string;
+  scrollRef: React.Ref<HTMLDivElement>;
 };
 
-export default function Contact({ id, ref }: scrollsectionType) {
+
+export default function Contact({ scrollId, scrollRef }: scrollsectionType) {
   return (
     <>
-      <div className={styles.contactContainer} id={id} ref={ref}>
+      <div className={styles.contactContainer} id={scrollId} ref={scrollRef}>
         <div>
           <h1 className={styles.contactHeading}>Reach out to me!</h1>
           <p className={styles.contactText}>

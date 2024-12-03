@@ -9,9 +9,9 @@ import Link from "next/link";
 import Icon from "@/components/icon";
 import { projectsData, techColors } from "@/components/projectData";
 import { useEffect, useRef, useState } from "react";
-import Achievements from "../achievements/page";
 import Loader from "@/components/loader";
 import Contact from "../contact/page";
+import Achievement from "../achievement/page";
 
 export default function Portfolio() {
   const { isDarkTheme } = useTheme();
@@ -28,9 +28,9 @@ export default function Portfolio() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const contactRef = useRef(null);
-  const projectsRef = useRef(null);
-  const acheievemnetRef = useRef(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const acheievemnetRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({
@@ -182,9 +182,9 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <Achievements id="acheievemnet" ref={acheievemnetRef} />
+          <Achievement scrollId="acheievemnet" scrollRef={acheievemnetRef} />
 
-          <Contact id="contact" ref={contactRef} />
+          <Contact scrollId="contact" scrollRef={contactRef} />
 
           <div className={style.errowSign} onClick={handleScrollToTop}>
             <Image

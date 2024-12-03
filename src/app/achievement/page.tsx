@@ -1,17 +1,17 @@
 import Image from "next/image";
-import styles from "./../achievements/main.module.css";
+import styles from "./../achievement/main.module.css";
 import Link from "next/link";
 
 type scrollsectionType = {
-  id: string;
-  ref?: React.Ref<HTMLDivElement>;
-}
+  scrollId: string;
+  scrollRef: React.Ref<HTMLDivElement>;
+};
 
-export default function Achievements({ id , ref }: scrollsectionType) {
+export default function Achievement({ scrollId , scrollRef }: scrollsectionType) {
 
   return (
     <>
-      <div className={styles.achievements} id={id} ref={ref}>
+      <div className={styles.achievements} id={scrollId} ref={scrollRef}>
         <h1>Achievements And Certifications 🏆</h1>
         <div className={styles.achievement_item}>
           <Image

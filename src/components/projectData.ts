@@ -19,10 +19,9 @@ export type colorsDataTyoe = {
 export const techColors: { [key: string]: string } = {
   javascript: "yellow",
   typescript: "blue",
-  react: "cyan", // example for react
-  html: "red", // example for html
-  css: "green", // example for css
-  // add more technologies here
+  react: "cyan", 
+  html: "red", 
+  css: "green", 
 };
 
 export const projectsData: projectsDataTyoe[] = [
