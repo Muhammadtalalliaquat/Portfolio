@@ -112,8 +112,6 @@
     letter-spacing: 3px;
   }
 
-
-
   @media (max-width: 768px) {
     .menu {
       opacity: 0;

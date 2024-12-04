@@ -4,7 +4,6 @@ export type projectsDataTyoe = {
   description: string;
   url: string;
   id: number;
-  // technologies: string[];
   technologies: string[]; 
 };
 
