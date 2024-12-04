@@ -89,7 +89,6 @@ export default function Portfolio() {
                 <Link href="https://pdf.ac/2HsAxJ" target="_blank">
                   <button
                     className={style.viewButton}
-                    // className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300 ease-in-out"
                   >
                     View Resume
                   </button>
@@ -182,8 +181,6 @@ export default function Portfolio() {
             </div>
           </div>
 
-
-          
           <Achievement scrollId="acheievemnet" scrollRef={acheievemnetRef} />
 
           <Contact scrollId="contact" scrollRef={contactRef} />
