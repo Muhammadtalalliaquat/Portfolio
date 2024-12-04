@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 :root {
-  /* --background: #ffffff;
-  --foreground: #171717; */
 
   --background-color: #fff;
   --text-color: #333;
@@ -19,7 +17,6 @@
   --card-box-shadow-light: 0 2px 5px rgba(0, 0, 0, 0.4);
   --card-box-shadow-dark: 0 2px 5px rgb(0, 0, 0.1); 
 
-  /* ---proficiency-width: 85%;  */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,7 +55,6 @@ body {
   color: var(--text-color);
 }
 
-/* Button and hover effects */
 button {
   background-color: var(--primary-color);
   color: var(--text-color);
