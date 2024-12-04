@@ -9,8 +9,8 @@ export default function Loader() {
           className={style.image}
           src={"https://i.postimg.cc/FzGLHWtt/output-onlinegiftools.gif"}
           alt="Loading..."
-          width={300}
-          height={300}
+          width={200}
+          height={200}
         />
         <p className={style.text}>Talal Liaquat</p>
         <span className={style.span}>Protfolio</span>
