@@ -10,8 +10,8 @@ import Icon from "@/components/icon";
 import { projectsData, techColors } from "@/components/projectData";
 import { useEffect, useRef, useState } from "react";
 import Loader from "@/components/loader";
-import Contact from "../contact/page";
-import Achievement from "../achievement/page";
+import Achievement from "@/components/achievement";
+import Contact from "@/components/Contact";
 
 export default function Portfolio() {
   const { isDarkTheme } = useTheme();
@@ -182,6 +182,8 @@ export default function Portfolio() {
             </div>
           </div>
 
+
+          
           <Achievement scrollId="acheievemnet" scrollRef={acheievemnetRef} />
 
           <Contact scrollId="contact" scrollRef={contactRef} />

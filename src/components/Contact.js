@@ -1,16 +1,11 @@
 import Icon from "@/components/icon";
-import styles from "./../contact/main.module.css";
+import styles from "./../app/main.module.css";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
-type scrollsectionType = {
-  scrollId: string;
-  scrollRef: React.Ref<HTMLDivElement>;
-};
 
-
-export default function Contact({ scrollId, scrollRef }: scrollsectionType) {
+export default function Contact({ scrollId, scrollRef }) {
   return (
     <>
       <div className={styles.contactContainer} id={scrollId} ref={scrollRef}>

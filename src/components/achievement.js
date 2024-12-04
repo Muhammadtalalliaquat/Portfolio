@@ -1,13 +1,9 @@
 import Image from "next/image";
-import styles from "./../achievement/main.module.css";
+import styles from "./../app/main.module.css";
 import Link from "next/link";
 
-type goTosectionType = {
-  scrollId: string;
-  scrollRef: React.Ref<HTMLDivElement>;
-};
 
-export default function Achievement({ scrollId , scrollRef }: goTosectionType) {
+export default function Achievement({ scrollId , scrollRef }) {
 
   return (
     <>
