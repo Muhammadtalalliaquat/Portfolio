@@ -39,6 +39,9 @@ function Navbar({ onScroll, sections }) {
           <li onClick={() => onScroll(sections.projects)}>
             <span>Projects</span>
           </li>
+          <li onClick={() => onScroll(sections.about)}>
+            <span>About</span>
+          </li>
           <li onClick={() => onScroll(sections.contact)}>
             <span>Contact</span>
           </li>

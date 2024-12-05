@@ -36,7 +36,7 @@
     "src/app/achievement/page.tsx",
     "src/app/contact/page.tsx",
     "src/app/portfolio/page.tsx"
-, "src/components/Contact.js", "src/components/achievement.js"  ],
+, "src/components/Contact.js", "src/components/achievement.js", "src/components/about.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -69,7 +69,7 @@
 
   .iconContanier{
     display: flex;
-    gap: 15px;
+    gap: 13px;
     font-size: 12px;
     margin-bottom: 10px;
   }
@@ -81,7 +81,7 @@
   }
   
   .icon:hover {
-    color: #0505ce;
+    color: #0570ce;
   }
 
 

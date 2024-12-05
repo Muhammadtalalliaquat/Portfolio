@@ -2,7 +2,7 @@ import Icon from "@/components/icon";
 import styles from "./../app/main.module.css";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Contact({ scrollId, scrollRef }) {
@@ -18,6 +18,10 @@ export default function Contact({ scrollId, scrollRef }) {
           <div className={styles.iconDiv}>
             <FontAwesomeIcon className={styles.icon} icon={faLocationDot} />
             <p>Karachi, Pakistan</p>
+          </div>
+          <div className={styles.iconDiv}>
+            <FontAwesomeIcon className={styles.icon} icon={faPhone} />
+            <p>+923252091919</p>
           </div>
           <div className={styles.iconDiv}>
             <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />

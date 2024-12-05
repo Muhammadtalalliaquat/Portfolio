@@ -10,7 +10,6 @@
     gap: 20px;
 }
 
-
 /* Three dots styling */
 
 .lines {
@@ -31,7 +30,6 @@
 .lines .center_line {
   background-color: blueviolet;
 }
-
 
 
 .proficiencyContainer {
@@ -90,10 +88,6 @@
 
 /* Project overview section */
 
-.backgroundColor{
-  background-size: 200% 200%;
-  animation: gradientPulse 8s ease-in-out forwards; 
-}
 
 .projectOverview {
     text-align: center;
@@ -262,13 +256,18 @@
         flex-direction: column; 
         align-items: center;
         width: 100%;
-        padding: 25px;
-        gap: 15px;
+        gap: 0;
     }
     .main_container>div{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    #acountContainer{
+      display: none;
 
+    }
     .projectGrid{
         display: flex;
         flex-direction: column;
@@ -276,9 +275,12 @@
     .projectCard{
       width: 100%;
     }
-
+    .proficiencyContainer{
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        margin-top: 18%;
+    }
     .skillName{
-      flex: none;
+      font-size: 0.8em;
     }
   }
   

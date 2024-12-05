@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import Loader from "@/components/loader";
 import Achievement from "@/components/achievement";
 import Contact from "@/components/Contact";
+import About from "@/components/about";
 
 export default function Portfolio() {
   const { isDarkTheme } = useTheme();
@@ -31,6 +32,7 @@ export default function Portfolio() {
   const contactRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const acheievemnetRef = useRef<HTMLDivElement>(null);
+  const aboutMeRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({
@@ -58,6 +60,7 @@ export default function Portfolio() {
               projects: projectsRef,
               contact: contactRef,
               acheievemnet: acheievemnetRef,
+              about: aboutMeRef,
             }}
           />
 
@@ -72,27 +75,19 @@ export default function Portfolio() {
               <q style={{ fontWeight: "bolder", textDecoration: "qute" }}>
                 Front-end developer
               </q>
-              <p className="600 leading-relaxed mb-6">
+              <p className="600 leading-relaxed ">
                 As a well-rounded individual and a front-hand web developer, I
                 am very attentive to the little things, especially
                 user-responsive and user-friendly web applications. I am
-                currently learning front-hand from Saylani mass IT training
-                institute. While passionate about both, I focus on writing
-                clean, simple, and sustainable front end. Through close
-                cooperation and creative solutions to problems, I aim to provide
-                users with a flawless experience!
+                currently learning back-hand from{" "}
+                <b> Saylani mass IT training institute.</b> While passionate
+                about both, I focus on writing clean, simple, and sustainable
+                front end. Through close cooperation and creative solutions to
+                problems, I aim to provide users with a flawless experience!
               </p>
 
-              <div style={{ display: "flex", gap: "15px" }}>
+              <div id={style.acountContainer} className="mt-4">
                 <Icon />
-
-                <Link href="https://pdf.ac/2HsAxJ" target="_blank">
-                  <button
-                    className={style.viewButton}
-                  >
-                    View Resume
-                  </button>
-                </Link>
               </div>
             </div>
 
@@ -183,6 +178,8 @@ export default function Portfolio() {
 
           <Achievement scrollId="acheievemnet" scrollRef={acheievemnetRef} />
 
+          <About scrollId="about" scrollRef={aboutMeRef} />
+          <br />
           <Contact scrollId="contact" scrollRef={contactRef} />
 
           <div className={style.errowSign} onClick={handleScrollToTop}>

@@ -67,3 +67,41 @@ export const projectsData: projectsDataTyoe[] = [
     id: 6
   },
 ];
+
+type skillDataType = {
+  id: number;
+  name: string
+}
+
+export const skillData: skillDataType[] = [
+  { id: 1, name: "HTML, CSS, JavaScript (ES6+)" },
+  { id: 2, name: "TypeScript" },
+  { id: 3, name: "React.js and Next.js" },
+  { id: 4, name: "Responsive Design (Flexbox, Grid)" },
+  { id: 5, name: "Git and GitHub" },
+  { id: 6, name: "Problem-Solving and Debugging" },
+];
+
+type educationDataDataType = {
+  id: number;
+  degree: string;
+  institution: string;
+  status: string;
+  completedYear?: number
+}
+
+export const educationData: educationDataDataType[] = [
+  {
+      id: 1,
+      degree: "Intermediate in Computer Science",
+      institution: "Govt. Islamia Science College",
+      status: "Ongoing",
+  },
+  {
+    id: 2,
+    degree: "Secondary School Certificate",
+    institution: "Indus Grammar School",
+    completedYear: 2022,
+    status: ""
+  },
+];

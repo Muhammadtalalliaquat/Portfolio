@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import style from "./../components/main.module.css";
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ export default function Icon() {
 
             <Link href={"https://www.linkedin.com/in/m-talalliaquat/"} target="_blank">
               <FontAwesomeIcon
-                icon={faLinkedinIn}
+                icon={faLinkedin}
                 size="2x"
                 className={style.icon}
               /> 
