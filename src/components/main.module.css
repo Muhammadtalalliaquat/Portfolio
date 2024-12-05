@@ -97,8 +97,8 @@
   }
   .image{
     object-fit: cover;
-    width: 200;
-    height: 200;
+    width: 50;
+    height: 50;
   }
   .text{
     margin-top: 16;
