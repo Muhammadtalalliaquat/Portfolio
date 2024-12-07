@@ -273,6 +273,7 @@
   
   .iconDiv {
     background-color: var(--background-color);
+    backgroun-color: "white"
     color: var(--text-color);
     display: flex;
     align-items: center;
