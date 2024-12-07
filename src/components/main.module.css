@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #333;
+/*     background-color: #333; */
     color: var(--text-color);
     background: var(--background);
   }
@@ -75,7 +75,7 @@
   }
   
   .icon {
-    background: var(--background);
+/*     background: var(--background); */
     color: var(--text-color);
     transition: color 0.3s ease;
   }
