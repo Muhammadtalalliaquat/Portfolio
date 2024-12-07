@@ -272,8 +272,8 @@
   }
   
   .iconDiv {
-    background-color: var(--background-color);
-    backgroun-color: "white"
+/*     background-color: var(--background-color); */
+    backgroun-color: "blue";
     color: var(--text-color);
     display: flex;
     align-items: center;
