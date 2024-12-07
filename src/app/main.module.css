@@ -272,8 +272,7 @@
   }
   
   .iconDiv {
-/*     background-color: var(--background-color); */
-    backgroun-color: "blue";
+    background-color: var(--background-color);
     color: var(--text-color);
     display: flex;
     align-items: center;
@@ -300,8 +299,8 @@
   }
   
   .icon {
-    background: var(--background);
-    color: var(--text-color);
+/*     background: var(--background); */
+/*     color: var(--text-color); */
     transition: color 0.3s ease;
   }
   .icon:hover {
