@@ -25,18 +25,23 @@ function Navbar({ onScroll, sections }) {
           onClick={toggleMenubar}
           aria-label="Toggle menu"
         >
-          <span className={isMenuOpen ? styles.cross : styles.burger}>
             {isMenuOpen ? (
               <Image
+                className={`${styles.closeMenustyle} ${isDarkTheme ? styles.dark : styles.light}`}
                 width={15}
                 height={15}
-                src={"https://i.postimg.cc/XvRLFGVW/close.png"}
+                src={"https://i.postimg.cc/rsftGmBg/close.png"}
                 alt="Close Menu"
               />
             ) : (
-              "☰"
+              <Image
+                className={`${styles.closeMenustyle} ${isDarkTheme ? styles.dark : styles.light}`}
+                width={15}
+                height={15}
+                src={"https://i.postimg.cc/FRtqmFnP/more.png"}
+                alt="hamburger menu"
+              />
             )}
-          </span>
         </button>
 
         <ul className={`${styles.menu} ${isMenuOpen ? styles.menu_open : ""}`}>
