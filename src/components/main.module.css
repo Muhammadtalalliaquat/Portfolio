@@ -65,7 +65,18 @@
     cursor: pointer;
   }
 
+  .closeMenustyle {
+  transition: filter 0.3s ease;
+ }
 
+ .light {
+  filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg);
+ }
+
+ .dark {
+  filter: invert(100%) sepia(10%) saturate(500%) hue-rotate(0deg);
+ }
+ 
   .iconContanier{
     display: flex;
     gap: 13px;
