@@ -3,6 +3,8 @@
 import styles from "./../components/main.module.css";
 import { useState } from "react";
 import { useTheme } from "./../context/themeContext";
+import Image from "next/image";
+
 
 function Navbar({ onScroll, sections }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
