@@ -24,7 +24,16 @@ function Navbar({ onScroll, sections }) {
           aria-label="Toggle menu"
         >
           <span className={isMenuOpen ? styles.cross : styles.burger}>
-            {isMenuOpen ? "X" : "☰"}
+            {isMenuOpen ? (
+              <Image
+                width={15}
+                height={15}
+                src={"https://i.postimg.cc/XvRLFGVW/close.png"}
+                alt="Close Menu"
+              />
+            ) : (
+              "☰"
+            )}
           </span>
         </button>
 
