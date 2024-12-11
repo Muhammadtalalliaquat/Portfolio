@@ -3,6 +3,8 @@
 import styles from "./../components/main.module.css";
 import { useState } from "react";
 import { useTheme } from "./../context/themeContext";
+import Image from "next/image";
+
 
 function Navbar({ onScroll, sections }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +25,26 @@ function Navbar({ onScroll, sections }) {
           onClick={toggleMenubar}
           aria-label="Toggle menu"
         >
-          <span className={isMenuOpen ? styles.cross : styles.burger}>
-            {isMenuOpen ? "X" : "☰"}
-          </span>
+          {/* <span className={isMenuOpen ? styles.cross : styles.burger}> */}
+            {isMenuOpen ? (
+              <Image
+                className={`${styles.closeMenustyle} ${isDarkTheme ? styles.dark : styles.light}`}
+                width={15}
+                height={15}
+                src={"https://i.postimg.cc/rsftGmBg/close.png"}
+                alt="Close Menu"
+              />
+            ) : (
+              <Image
+                className={`${styles.closeMenustyle} ${isDarkTheme ? styles.dark : styles.light}`}
+                width={15}
+                height={15}
+                src={"https://i.postimg.cc/FRtqmFnP/more.png"}
+                alt="hamburger menu"
+              />
+            )}
+            {/* {isMenuOpen ? <Image width={15} height={15} src={"https://i.postimg.cc/XvRLFGVW/close.png"} alt="Close Menu" /> : "☰"} */}
+          {/* </span> */}
         </button>
 
         <ul className={`${styles.menu} ${isMenuOpen ? styles.menu_open : ""}`}>

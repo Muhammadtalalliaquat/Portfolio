@@ -220,7 +220,8 @@
 
   }
   
-.errowSign {
+  
+.arrowSign {
     position: fixed;
     bottom: 20px;
     right: 20px; 
@@ -232,13 +233,19 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    visibility: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    /* transition: transform 0.3s ease, background-color 0.3s ease; */
   }
   
 .arrowSign:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
+    transform: scale(0.95);
+  }
+
+  .arrowSign.transition {
+    opacity: 1;
+    visibility: visible;
   }
  
   .bottom_p{
@@ -277,7 +284,6 @@
     }
     .proficiencyContainer{
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        margin-top: 18%;
     }
     .skillName{
       font-size: 0.8em;

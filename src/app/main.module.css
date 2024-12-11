@@ -298,8 +298,8 @@
   }
   
   .icon {
-    background: var(--background);
-    color: var(--text-color);
+    /* background: var(--background); */
+    /* color: var(--text-color); */
     transition: color 0.3s ease;
   }
   .icon:hover {

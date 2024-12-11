@@ -17,11 +17,12 @@ import About from "@/components/about";
 export default function Portfolio() {
   const { isDarkTheme } = useTheme();
   const [loader, setLoader] = useState(true);
+  const [showButton, setShowButton] = useState(false);
 
   const loading = () => {
     setTimeout(() => {
       setLoader(false);
-    }, 2000);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -40,6 +41,19 @@ export default function Portfolio() {
       block: "start",
     });
   };
+
+  useEffect(() => {
+    const handleScrollYeaix = () => {
+      if (window.scrollY > 350) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+    window.addEventListener("scroll", handleScrollYeaix);
+
+    return () => window.removeEventListener("scroll", handleScrollYeaix);
+  }, []);
 
   const handleScrollToTop = () => {
     window.scrollTo({
@@ -182,15 +196,21 @@ export default function Portfolio() {
           <br />
           <Contact scrollId="contact" scrollRef={contactRef} />
 
-          <div className={style.errowSign} onClick={handleScrollToTop}>
-            <Image
-              src={"https://i.postimg.cc/1tX5HNJW/arrow.png"}
-              style={{ objectFit: "cover", fill: "white" }}
-              alt="Scroll to Top"
-              width={30}
-              height={30}
-            />
-          </div>
+          {showButton && (
+            <div
+              className={`${style.arrowSign} ${style.transition}`}
+              onClick={handleScrollToTop}
+            >
+              <Image
+                src={"https://i.postimg.cc/1tX5HNJW/arrow.png"}
+                style={{ objectFit: "cover", fill: "white" }}
+                alt="Scroll to Top"
+                width={30}
+                height={30}
+              />
+            </div>
+          )}
+
           <p className={style.bottom_p}>Made By Talal Liaquat</p>
         </>
       )}
