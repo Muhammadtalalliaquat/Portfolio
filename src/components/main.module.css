@@ -4,16 +4,10 @@
     align-items: center;
     padding: 1rem 2rem;
     color: var(--text-color);
-<<<<<<< HEAD
-    /* background: var(--background); */
-=======
-/*     background: var(--background); */
->>>>>>> 048eaa51ca3c095f2117e1d0db16cfa9c212e7f0
   }
 
   .menu {
     display: flex;
-    /* color: var(--text-color); */
     list-style: none;
     gap: 3.5rem;
     transition: transform 0.3s ease;
@@ -70,7 +64,6 @@
     cursor: pointer;
   }
 
-<<<<<<< HEAD
  .closeMenustyle {
   transition: filter 0.3s ease;
  }
@@ -83,11 +76,9 @@
   filter: invert(100%) sepia(10%) saturate(500%) hue-rotate(0deg);
  }
 
-=======
   .closeMenustyle {
   transition: filter 0.3s ease;
  }
->>>>>>> 048eaa51ca3c095f2117e1d0db16cfa9c212e7f0
 
  .light {
   filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg);
@@ -105,10 +96,6 @@
   }
   
   .icon {
-<<<<<<< HEAD
-=======
-/*     background: var(--background); */
->>>>>>> 048eaa51ca3c095f2117e1d0db16cfa9c212e7f0
     color: var(--text-color);
     transition: color 0.3s ease;
   }
