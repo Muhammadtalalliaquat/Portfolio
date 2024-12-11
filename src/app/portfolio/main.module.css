@@ -110,6 +110,9 @@
   }
 
   .projectCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: var(--card-bg-color);
     color: var(--card-text-color); 
     border-radius: 8px;
@@ -257,7 +260,7 @@
   }
 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 788px) {
     .main_container {
         display: flex;
         flex-direction: column; 
@@ -276,11 +279,20 @@
 
     }
     .projectGrid{
-        display: flex;
-        flex-direction: column;
-    }
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center
+    }   
     .projectCard{
-      width: 100%;
+      width: 45%;  /* Maintain 45% width */
+      margin: 10px 0;  /* Adds margin between cards */
+      height: 230px;  /* Ensure height stays the same */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between
+      /* width: 45%;  */
+      /* margin: 10px 0; */
     }
     .proficiencyContainer{
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -290,3 +302,10 @@
     }
   }
   
+  @media screen and (max-width: 550px) {
+    .projectCard{
+      width: 90%;
+      height: auto;
+      margin: 10px 0;
+    }
+  }
