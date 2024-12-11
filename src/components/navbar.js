@@ -25,7 +25,10 @@ function Navbar({ onScroll, sections }) {
           onClick={toggleMenubar}
           aria-label="Toggle menu"
         >
+<<<<<<< HEAD
           {/* <span className={isMenuOpen ? styles.cross : styles.burger}> */}
+=======
+>>>>>>> 048eaa51ca3c095f2117e1d0db16cfa9c212e7f0
             {isMenuOpen ? (
               <Image
                 className={`${styles.closeMenustyle} ${isDarkTheme ? styles.dark : styles.light}`}
@@ -43,8 +46,11 @@ function Navbar({ onScroll, sections }) {
                 alt="hamburger menu"
               />
             )}
+<<<<<<< HEAD
             {/* {isMenuOpen ? <Image width={15} height={15} src={"https://i.postimg.cc/XvRLFGVW/close.png"} alt="Close Menu" /> : "☰"} */}
           {/* </span> */}
+=======
+>>>>>>> 048eaa51ca3c095f2117e1d0db16cfa9c212e7f0
         </button>
 
         <ul className={`${styles.menu} ${isMenuOpen ? styles.menu_open : ""}`}>

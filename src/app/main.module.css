@@ -272,6 +272,7 @@
   }
   
   .iconDiv {
+    background-color: var(--background-color);
     color: var(--text-color);
     display: flex;
     align-items: center;
@@ -298,8 +299,13 @@
   }
   
   .icon {
+<<<<<<< HEAD
     /* background: var(--background); */
     /* color: var(--text-color); */
+=======
+/*     background: var(--background); */
+/*     color: var(--text-color); */
+>>>>>>> 048eaa51ca3c095f2117e1d0db16cfa9c212e7f0
     transition: color 0.3s ease;
   }
   .icon:hover {
