@@ -63,7 +63,7 @@ export default function About({ scrollId, scrollRef }) {
             it to learn more about my experience and skills.
           </p>
           <a
-            href="/Talal 2024_27_10 CV.pdf"
+            href="/My-reusme.pdf"
             download
             className={styles.resume_link}
           >
