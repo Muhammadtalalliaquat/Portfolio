@@ -87,10 +87,10 @@ export default function Portfolio() {
             <div className="w-3/5">
               <h1 className="text-4xl font-bold mb-4">Hi, I&apos;m Talal 👋</h1>
               <q style={{ fontWeight: "bolder", textDecoration: "qute" }}>
-                Front-end developer
+                Web Developer
               </q>
               <p className="600 leading-relaxed ">
-                As a well-rounded individual and a front-hand web developer, I
+                As a well-rounded individual and a front-hand and back-end web developer, I
                 am very attentive to the little things, especially
                 user-responsive and user-friendly web applications. I am
                 currently learning back-hand from{" "}
