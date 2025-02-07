@@ -9,16 +9,11 @@ export default function About({ scrollId, scrollRef }) {
       <div className={styles.about_container} id={scrollId} ref={scrollRef}>
         <h1>About Me</h1>
         <p>
-          hello! I&apos;m Talal, a web developer with a passion for creating
-          innovative and easy-to-use web applications. I have experience in
-          front-end technology. Focused on creating user-friendly designs... and
-          smooth user experience
-        </p>
-        <p>
-          In addition to writing code I also enjoy learning new skills. and
-          explore modernity as well Website development tools and managing
-          challenging projects I have a goal To continue to grow as a developer
-          and make meaningful contributions. The solution is
+          Hi, I&apos;m Talal! A passionate web developer focused on crafting
+          user-friendly designs and seamless experiences. I specialize in
+          front-end technologies and love exploring modern tools to build
+          innovative web applications. Constantly learning and growing, I aim to
+          tackle challenges and create meaningful solutions.
         </p>
 
         <div className={styles.infoContainer}>
@@ -52,21 +47,19 @@ export default function About({ scrollId, scrollRef }) {
             </div>
           </div>
         </div>
-        
+
         <br />
 
         <div className={styles.reusmeDiv}>
           {/* Resume Section */}
-          <h2 className="text-2xl font-bold mb-2">Muhammad Talal Liaquat Resume</h2>
+          <h2 className="text-2xl font-bold mb-2">
+            Muhammad Talal Liaquat Resume
+          </h2>
           <p>
             Here is a link to my <strong>resume</strong>. Feel free to download
             it to learn more about my experience and skills.
           </p>
-          <a
-            href="/My-reusme.pdf"
-            download
-            className={styles.resume_link}
-          >
+          <a href="/My-reusme.pdf" download className={styles.resume_link}>
             <FontAwesomeIcon icon={faDownload} /> Download Resume
           </a>
         </div>

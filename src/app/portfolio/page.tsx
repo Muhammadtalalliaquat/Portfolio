@@ -89,15 +89,13 @@ export default function Portfolio() {
               <q style={{ fontWeight: "bolder", textDecoration: "qute" }}>
                 Web Developer
               </q>
-              <p className="600 leading-relaxed ">
-                As a well-rounded individual and a front-hand and back-end web developer, I
-                am very attentive to the little things, especially
-                user-responsive and user-friendly web applications. I am
-                currently learning back-hand from{" "}
-                <b> Saylani mass IT training institute.</b> While passionate
-                about both, I focus on writing clean, simple, and sustainable
-                front end. Through close cooperation and creative solutions to
-                problems, I aim to provide users with a flawless experience!
+              <p className="600 leading-relaxed">
+                MERN stack developer specializing in clean, sustainable
+                front-end code. Passionate about user-friendly design and
+                efficient web solutions, with training from <b>Saylani&apos;s Mass IT
+                Institute.</b> While I have experience in both front-end and
+                back-end development, my primary focus is on writing clean,
+                simple, and maintainable code to enhance user experiences.
               </p>
 
               <div id={style.acountContainer} className="mt-4">
