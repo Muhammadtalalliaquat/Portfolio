@@ -25,33 +25,40 @@ export const techColors: { [key: string]: string } = {
 
 export const projectsData: projectsDataTyoe[] = [
   {
+    name: "Chat Web App",
+    description: "A real-time chat web app using WebSockets for instant messaging. Users can send and receive messages seamlessly, with messages stored in a database for persistence.",
+    url: "https://next-js-chat-app-project.vercel.app/",
+    technologies: ["Javascript"],
+    id: 1
+  },
+  {
     name: "Blog Post Crafted",
     description: "A blogging app is a platform where users can read and comment on blog posts.",
     url: "https://blogging-app-tawny.vercel.app/get-started",
     technologies: ["Typescript"],
-    id: 1
+    id: 2
   },
   {
     name: "Expense Tracker",
     description: "A user-friendly Expense Tracker app designed to help you easily track and manage your monthly expenses.",
     url: "https://expenses-tracker-bay-xi.vercel.app",
     technologies: ["Typescript"],
-    id: 2
+    id: 3
   },
   {
     name: "Temperature Converter",
     description: "Easily switch between Celsius, Fahrenheit, and Kelvin with this simple tool.",
     url: "https://muhammadtalalliaquat.github.io/Temperature-converter-app/",
     technologies: ["Javascript"],
-    id: 3
-  },
-  {
-    name: "To Do App",
-    description: "This To-Do app allows users to create, edit, and manage their tasks easily.It is a user-friendly interface that helps you keep track of what you need to do",
-    url: "https://muhammadtalalliaquat.github.io/To-do-app-javascript/",
-    technologies: ["javascript"],
     id: 4
   },
+  // {
+  //   name: "To Do App",
+  //   description: "This To-Do app allows users to create, edit, and manage their tasks easily.It is a user-friendly interface that helps you keep track of what you need to do",
+  //   url: "https://muhammadtalalliaquat.github.io/To-do-app-javascript/",
+  //   technologies: ["javascript"],
+  //   id: 5
+  // },
   {
     name: "Calculation App",
     description: "The Calculation App is a straightforward tool designed to help users perform basic arithmetic calculations with ease.",
@@ -105,5 +112,24 @@ export const educationData: educationDataDataType[] = [
     institution: "Indus Grammar School",
     completedYear: 2022,
     status: ""
+  },
+];
+
+
+
+export const achievements = [
+  {
+    id: 1,
+    title: "Foundations of User Experience (UX) Design",
+    image: "https://i.postimg.cc/cJcJkW9R/google.png",
+    alt: "google-image",
+    link: "https://www.coursera.org/account/accomplishments/certificate/82GDGL4B9BCD",
+  },
+  {
+    id: 2,
+    title: "JavaScript Essentials 1",
+    image: "https://gil4w.eu/wp-content/uploads/2021/12/Cisco-1.png",
+    alt: "cisco-networking",
+    link: "https://magenta-cesya-2.tiiny.site/",
   },
 ];
