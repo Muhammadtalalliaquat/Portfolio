@@ -13,11 +13,13 @@ import Loader from "@/components/loader";
 import Achievement from "@/components/achievement";
 import Contact from "@/components/Contact";
 import About from "@/components/about";
+import { motion } from "framer-motion";
 
 export default function Portfolio() {
   const { isDarkTheme } = useTheme();
   const [loader, setLoader] = useState(true);
   const [showButton, setShowButton] = useState(false);
+  
 
   const loading = () => {
     setTimeout(() => {
@@ -85,17 +87,18 @@ export default function Portfolio() {
             }`}
           >
             <div className="w-3/5">
-              <h1 className="text-4xl font-bold mb-4">Hi, I&apos;m Talal 👋</h1>
+              <h1 className="text-2xl font-bold mb-4">Hi, I&apos;m Talal 👋</h1>
               <q style={{ fontWeight: "bolder", textDecoration: "qute" }}>
                 Web Developer
               </q>
               <p className="600 leading-relaxed">
                 MERN stack developer specializing in clean, sustainable
                 front-end code. Passionate about user-friendly design and
-                efficient web solutions, with training from <b>Saylani&apos;s Mass IT
-                Institute.</b> While I have experience in both front-end and
-                back-end development, my primary focus is on writing clean,
-                simple, and maintainable code to enhance user experiences.
+                efficient web solutions, with training from{" "}
+                <b>Saylani&apos;s Mass IT Institute.</b> While I have experience
+                in both front-end and back-end development, my primary focus is
+                on writing clean, simple, and maintainable code to enhance user
+                experiences.
               </p>
 
               <div id={style.acountContainer} className="mt-4">
@@ -132,33 +135,38 @@ export default function Portfolio() {
             <br />
             <div className={style.projectGrid}>
               {projectsData.map(
-                ({ name, description, url, technologies, id }) => (
-                  <div key={name} className={style.projectCard}>
+                ({ name, description, url, technologies, id }, i) => (
+                  <motion.div
+                    key={name}
+                    className={style.projectCard}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                  >
                     <h3>{name}</h3>
                     <p>{description}</p>
 
                     <div className={style.btn_contanier}>
                       <div className={style.tech_contanier}>
-                        <div className={style.tech_contanier}>
-                          {technologies.map((tech) => (
-                            <div key={tech + id}>
-                              <p
-                                style={{
-                                  color:
-                                    techColors[tech.toLowerCase()] || "black",
-                                  display: "inline-block",
-                                  width: "10px",
-                                  height: "10px",
-                                  borderRadius: "50%",
-                                  backgroundColor:
-                                    techColors[tech.toLowerCase()] || "black",
-                                  margin: "0 5px",
-                                }}
-                              ></p>
-                              <span>{tech}</span>
-                            </div>
-                          ))}
-                        </div>
+                        {technologies.map((tech) => (
+                          <div key={tech + id}>
+                            <p
+                              style={{
+                                color:
+                                  techColors[tech.toLowerCase()] || "black",
+                                display: "inline-block",
+                                width: "10px",
+                                height: "10px",
+                                borderRadius: "50%",
+                                backgroundColor:
+                                  techColors[tech.toLowerCase()] || "black",
+                                margin: "0 5px",
+                              }}
+                            ></p>
+                            <span>{tech}</span>
+                          </div>
+                        ))}
                       </div>
                       <button className={style.viewButton}>
                         <Link
@@ -170,7 +178,7 @@ export default function Portfolio() {
                         </Link>
                       </button>
                     </div>
-                  </div>
+                  </motion.div>
                 )
               )}
             </div>
