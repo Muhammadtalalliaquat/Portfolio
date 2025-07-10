@@ -28,7 +28,7 @@ export const projectsData: projectsDataTyoe[] = [
     name: "Fashion Store",
     description:
       "Built with the MERN stack, this fashion store delivers a smooth, full-stack shopping experience from product discovery to checkout.",
-    url: "https://github.com/Muhammadtalalliaquat/Frontend-fashion-store-web-app",
+    url: "https://frontend-fashion-store-web-app.vercel.app/",
     technologies: ["Javascript"],
     id: 1,
   },
