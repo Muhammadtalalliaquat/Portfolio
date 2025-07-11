@@ -32,7 +32,7 @@ function Navbar({ onScroll, sections }) {
               height={15}
               className={`${styles.icon} ${
                 !isMenuOpen ? styles.show : styles.hide
-              }`}
+              } ${isDarkTheme ? styles.dark : styles.light}`}
             />
             <Image
               src="https://i.postimg.cc/rsftGmBg/close.png"
@@ -41,10 +41,11 @@ function Navbar({ onScroll, sections }) {
               height={15}
               className={`${styles.icon} ${
                 isMenuOpen ? styles.show : styles.hide
-              }`}
+              } ${isDarkTheme ? styles.dark : styles.light}`}
             />
           </div>
         </button>
+
         {/* <button
           className={styles.hamburger}
           onClick={toggleMenubar}
