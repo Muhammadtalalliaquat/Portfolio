@@ -28,7 +28,7 @@
 }
 
 .lines .center_line {
-  background-color: blueviolet;
+  background-color: #8a2be2;
 }
 
 .proficiencyContainer {
@@ -286,9 +286,9 @@
     /* width: 45%;  */
     /* margin: 10px 0; */
   }
-  .proficiencyContainer {
+  /* .proficiencyContainer {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
+  } */
   .skillName {
     font-size: 0.8em;
   }

@@ -14,6 +14,7 @@ import Achievement from "@/components/achievement";
 import Contact from "@/components/Contact";
 import About from "@/components/about";
 import { motion } from "framer-motion";
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Portfolio() {
   const { isDarkTheme } = useTheme();
@@ -86,22 +87,49 @@ export default function Portfolio() {
               isDarkTheme ? style.dark : style.light
             }`}
           >
-            <div className="w-3/5">
-              <h1 className="text-2xl font-bold mb-4">Hi, I&apos;m Talal 👋</h1>
-              <q style={{ fontWeight: "bolder", textDecoration: "qute" }}>
-                Web Developer
-              </q>
-              <p className="600 leading-relaxed">
+            <div className="w-full md:w-3/5 space-y-4">
+              <h1 className="text-3xl font-bold">
+                Hi, I&apos;m{" "}
+                <TypeAnimation
+                  sequence={["Talal 👋", 2000]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                  cursor={true}
+                />
+              </h1>
+
+              <p className="text-yellow-600 font-semibold text-lg">
+                <TypeAnimation
+                  sequence={[
+                    "Web Developer",
+                    2000,
+                    "MERN Stack Developer",
+                    2000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                  cursor={true}
+                />
+              </p>
+
+              <p className="leading-relaxed">
                 MERN stack developer specializing in clean, sustainable
                 front-end code. Passionate about user-friendly design and
                 efficient web solutions, with training from{" "}
-                <b>Saylani&apos;s Mass IT Institute.</b> While I have experience
-                in both front-end and back-end development, my primary focus is
-                on writing clean, simple, and maintainable code to enhance user
-                experiences.
+                <span className="font-bold">
+                  Saylani&apos;s Mass IT Institute
+                </span>
+                . While I have experience in both front-end and back-end
+                development, my primary focus is on writing clean, simple, and
+                maintainable code to enhance user experiences.
               </p>
 
-              <div id={style.acountContainer} className="mt-4">
+              <div
+                id={style.acountContainer}
+                className="flex items-center gap-3 mt-4"
+              >
                 <Icon />
               </div>
             </div>

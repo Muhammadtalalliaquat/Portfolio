@@ -24,6 +24,32 @@ function Navbar({ onScroll, sections }) {
           onClick={toggleMenubar}
           aria-label="Toggle menu"
         >
+          <div className={styles.iconWrapper}>
+            <Image
+              src="https://i.postimg.cc/FRtqmFnP/more.png"
+              alt="Hamburger Icon"
+              width={15}
+              height={15}
+              className={`${styles.icon} ${
+                !isMenuOpen ? styles.show : styles.hide
+              }`}
+            />
+            <Image
+              src="https://i.postimg.cc/rsftGmBg/close.png"
+              alt="Close Icon"
+              width={15}
+              height={15}
+              className={`${styles.icon} ${
+                isMenuOpen ? styles.show : styles.hide
+              }`}
+            />
+          </div>
+        </button>
+        {/* <button
+          className={styles.hamburger}
+          onClick={toggleMenubar}
+          aria-label="Toggle menu"
+        >
           {isMenuOpen ? (
             <Image
               className={`${styles.closeMenustyle} ${
@@ -45,7 +71,7 @@ function Navbar({ onScroll, sections }) {
               alt="hamburger menu"
             />
           )}
-        </button>
+        </button> */}
 
         <ul className={`${styles.menu} ${isMenuOpen ? styles.menu_open : ""}`}>
           <li
