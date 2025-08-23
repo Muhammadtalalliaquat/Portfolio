@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import style from "./../portfolio/main.module.css";
+import styles from "../main.module.css";
 import Navbar from "@/components/navbar";
 import Proficiency from "@/app/Proficiency/skill_level";
 import { useTheme } from "@/context/themeContext";
@@ -14,13 +15,12 @@ import Achievement from "@/components/achievement";
 import Contact from "@/components/Contact";
 import About from "@/components/about";
 import { motion } from "framer-motion";
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 
 export default function Portfolio() {
   const { isDarkTheme } = useTheme();
   const [loader, setLoader] = useState(true);
   const [showButton, setShowButton] = useState(false);
-  
 
   const loading = () => {
     setTimeout(() => {
@@ -135,16 +135,31 @@ export default function Portfolio() {
             </div>
 
             <div>
-              <Image
+              {/* <Image
                 src="https://i.ibb.co/CWvfFmr/output-onlinegiftools.gif"
                 style={{ objectFit: "cover" }}
                 alt="Development GIF"
                 width={300}
                 height={300}
                 unoptimized
-              />
+              /> */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <Image
+                  className={styles.imageDiv}
+                  src="https://i.postimg.cc/0yHgk2W5/my-pic-removebg-preview.png"
+                  alt="Profile Picture"
+                  width={300}
+                  height={300}
+                />
+              </motion.div>
             </div>
           </div>
+          <br />
 
           <Proficiency />
           <br />
@@ -244,8 +259,6 @@ export default function Portfolio() {
               />
             </div>
           )}
-
-          <p className={style.bottom_p}>Made By Talal Liaquat</p>
         </>
       )}
     </>

@@ -2,9 +2,12 @@ import styles from "./../app/main.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { educationData, skillData } from "./projectData";
+import { useTheme } from "@/context/themeContext";
 import { motion } from "framer-motion";
 
 export default function About({ scrollId, scrollRef }) {
+    const { isDarkTheme } = useTheme();
+  
   return (
     <>
       <div className={styles.about_container} id={scrollId} ref={scrollRef}>
@@ -71,7 +74,12 @@ export default function About({ scrollId, scrollRef }) {
           transition={{ duration: 0.4 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className={styles.reusmeDiv}>
+          <div
+            className={`${styles.reusmeDiv} ${
+              isDarkTheme ? styles.dark : styles.light
+            }`}
+            // className={styles.reusmeDiv}
+          >
             {/* Resume Section */}
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">
               Muhammad Talal Liaquat Resume

@@ -11,9 +11,11 @@
   width: 100%;
   z-index: 1000;
 
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: #4d296e;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+  /* backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: transform 0.3s ease, background 0.4s ease, opacity 0.4s ease,
     color 0.4s ease;
   background: linear-gradient(
@@ -21,7 +23,14 @@
     rgba(138, 43, 226, 0.2),
     rgba(250, 208, 196, 0.2),
     rgba(251, 194, 235, 0.2)
-  );
+  ); */
+}
+
+.light {
+  background-color: #e9e9e9;
+}
+.dark {
+  color: #e9e9e9;
 }
 
 .menu {
@@ -40,8 +49,9 @@
 }
 
 .menu li:hover {
-  color: var(--text-color);
-  color: #8a2be2;
+  color: var(--primary-color);
+  /* color: var(--text-color); */
+  /* color: #8a2be2; */
   border-radius: 5px;
   transform: scale(1.05);
 }
@@ -53,7 +63,8 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #8a2be2;
+  background-color: var(--primary-color);
+  /* background-color: #8a2be2; */
   transition: width 0.3s ease;
 }
 
@@ -79,18 +90,6 @@
   border: none;
   color: var(--text-color);
   cursor: pointer;
-}
-
- /* .closeMenustyle {
-  transition: filter 0.3s ease;
-} */
-
-.light {
-  filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg);
-}
-
-.dark {
-  filter: invert(100%) sepia(10%) saturate(500%) hue-rotate(0deg);
 }
 
 .iconContanier {
@@ -186,7 +185,14 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0;
     transform: rotate(10deg);
-    color: var(--text-color);
+  }
+
+  .light .icon {
+    filter: invert(0);
+  }
+
+  .dark .icon {
+    filter: invert(1);
   }
 
   .show {
@@ -208,8 +214,10 @@
   }
 
   .menu li:hover {
-    color: var(--text-color);
-    color: #8a2be2;
+    color: var(--primary-color);
+
+    /* color: var(--text-color); */
+    /* color: #8a2be2; */
     border-radius: 5px;
     transform: scale(0.95);
   }
@@ -221,7 +229,9 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
+
+    /* background-color: #8a2be2; */
     transition: width 0.3s ease;
   }
 

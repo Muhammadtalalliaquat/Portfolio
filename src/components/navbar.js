@@ -14,7 +14,10 @@ function Navbar({ onScroll, sections }) {
   };
 
   return (
-    <div className={styles.navbar}>
+    <div
+      className={`${styles.navbar} ${isDarkTheme ? styles.dark : styles.light}`}
+      // className={styles.navbar}
+    >
       <div>
         <span className={styles.btn}>Portfolio</span>
       </div>
