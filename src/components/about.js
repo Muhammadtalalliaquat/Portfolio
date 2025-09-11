@@ -6,12 +6,17 @@ import { useTheme } from "@/context/themeContext";
 import { motion } from "framer-motion";
 
 export default function About({ scrollId, scrollRef }) {
-    const { isDarkTheme } = useTheme();
-  
+  const { isDarkTheme } = useTheme();
+
   return (
     <>
       <div className={styles.about_container} id={scrollId} ref={scrollRef}>
         <h1>About Me</h1>
+        <div className={styles.lines}>
+          <div></div>
+          <div className={styles.center_line}></div>
+          <div></div>
+        </div>
         <p>
           Hi, I&apos;m Talal! A passionate web developer focused on crafting
           user-friendly designs and seamless experiences. I specialize in

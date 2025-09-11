@@ -1,7 +1,7 @@
 /* Abou section styling */
 
 .about_container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   color: var(--text-color);
@@ -12,10 +12,36 @@
 .about_container h1 {
   font-size: 2.2rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: var(--text-color);
   text-align: center;
-  border-bottom: 5px solid #8a2be2;
+  /* border-bottom: 5px solid #8a2be2; */
+}
+
+.lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.lines div {
+  width: 12px;
+  height: 12px;
+  background: rgba(85, 85, 85, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.lines div:hover {
+  transform: scale(1.2);
+  background: rgba(138, 43, 226, 0.8);
+}
+
+.lines .center_line {
+  background: #8a2be2;
+  box-shadow: 0 4px 10px rgba(138, 43, 226, 0.6);
 }
 
 .heading {
@@ -23,6 +49,7 @@
 }
 
 .about_container p {
+  margin-top: 20px;
   margin-bottom: 15px;
   color: var(--text-color);
   text-align: justify;
@@ -182,18 +209,19 @@
 
 .achievement_item {
   background-color: var(--background-color);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
   /* width: 28%; */
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .achievement_item:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .achievement_item img {
@@ -282,7 +310,7 @@
 }
 
 .icon:hover {
-  color: blueviolet;
+  color: rgb(94, 155, 247);
 }
 
 .icon {
@@ -292,14 +320,23 @@
 }
 
 .signature {
+  /* background-color: #cccccc; */
+  background-color: var(--secondary-color);
+
+  color: var(--text-color);
+
   margin-top: 30px;
+  padding: 20px;
+  padding-top: 24px;
   text-align: center;
-  font-size: 18px;
+  font-size: 11px;
 }
 
 .signature span {
   font-weight: 600;
-  color: blueviolet;
+  color: var(--primary-color);
+
+  /* color: #fad0c4; */
 }
 
 .imageDiv {

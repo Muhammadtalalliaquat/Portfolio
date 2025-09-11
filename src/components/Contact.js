@@ -78,10 +78,10 @@ export default function Contact({ scrollId, scrollRef }) {
         </motion.div>
 
         {/* Signature */}
-        <p className={styles.signature}>
-          Made By <span>Talal Liaquat</span>
-        </p>
       </div>
+      <p className={styles.signature}>
+        Made By <span>Talal Liaquat.</span>All Rights Reserved.
+      </p>
 
       {/* <div className={styles.contactContainer} id={scrollId} ref={scrollRef}>
         <motion.div

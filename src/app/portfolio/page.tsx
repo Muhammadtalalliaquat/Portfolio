@@ -182,10 +182,25 @@ export default function Portfolio() {
                   <motion.div
                     key={name}
                     className={style.projectCard}
-                    initial={{ opacity: 0, y: 30 }}
+                    // initial={{ opacity: 0, y: 30 }}
+                    // whileInView={{ opacity: 1, y: 0 }}
+                    // transition={{ duration: 0.4, delay: i * 0.3 ,  ease: "easeOut",}}
+                    // viewport={{ once: true, amount: 0.2 }}
+                    initial={{ opacity: 0, y: 20 }} // thoda kam movement for snappy feel
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: i * 0.1 }}
-                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{
+                      duration: 0.25, // short but not too harsh
+                      delay: i * 0.08, // faster stagger
+                      ease: "easeOut",
+                    }}
+                    viewport={{ once: true, amount: 0.15 }}
+                    whileHover={{
+                      scale: 0.97,
+                      translateZ: 0,
+                      transition: { duration: 0.2, ease: "easeOut" },
+                    }}
+                    whileTap={{ scale: 0.97 }}
+                    layout
                   >
                     <h3>{name}</h3>
                     <p>{description}</p>
