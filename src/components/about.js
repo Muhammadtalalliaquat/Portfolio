@@ -93,7 +93,11 @@ export default function About({ scrollId, scrollRef }) {
               Here is a link to my <strong>resume</strong>. Feel free to
               download it to learn more about my experience and skills.
             </p>
-            <a href="/My-reusme.pdf" download className={styles.resume_link}>
+            <a
+              href="/Talal-resume.pdf"
+              download
+              className={styles.resume_link}
+            >
               <FontAwesomeIcon icon={faDownload} /> Download Resume
             </a>
           </div>
