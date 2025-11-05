@@ -269,8 +269,8 @@ export default function Portfolio() {
                 src={"https://i.postimg.cc/1tX5HNJW/arrow.png"}
                 style={{ objectFit: "cover", fill: "white" }}
                 alt="Scroll to Top"
-                width={30}
-                height={30}
+                width={20}
+                height={20}
               />
             </div>
           )}

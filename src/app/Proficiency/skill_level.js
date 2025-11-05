@@ -13,9 +13,9 @@ const Proficiency = () => {
 
 
   useEffect(() => {
-    frontendRef.current.style.setProperty('--proficiency', '70%');
-    programmingRef.current.style.setProperty('--proficiency', '75%');
-    reactjsRef.current.style.setProperty('--proficiency', '75%');
+    frontendRef.current.style.setProperty('--proficiency', '75%');
+    programmingRef.current.style.setProperty('--proficiency', '70%');
+    reactjsRef.current.style.setProperty('--proficiency', '85%');
     reactNativeRef.current.style.setProperty('--proficiency', '50%');
 
   }, []);
