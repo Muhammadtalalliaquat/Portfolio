@@ -87,7 +87,7 @@ export default function Portfolio() {
               isDarkTheme ? style.dark : style.light
             }`}
           >
-            <div className="w-full md:w-3/5 space-y-4">
+            <div className="w-full md:w-3/6 space-y-4">
               <h1 className="text-3xl font-bold">
                 Hi, I&apos;m{" "}
                 <TypeAnimation

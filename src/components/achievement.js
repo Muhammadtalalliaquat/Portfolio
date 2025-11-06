@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./../app/main.module.css";
 import Link from "next/link";
-import { achievements } from "../components/projectData"
+import { achievements } from "../components/projectData";
 import { motion } from "framer-motion";
 
 export default function Achievement({ scrollId, scrollRef }) {
@@ -25,7 +25,14 @@ export default function Achievement({ scrollId, scrollRef }) {
                 src={achievement.image}
               />
               <div className={styles.itemDvi}>
-                <p>{achievement.title}</p>
+                <p>
+                  <abbr title={achievement.title}>
+                    {achievement.title.length > 25
+                      ? `${achievement.title.slice(0, 25)}...`
+                      : achievement.title}
+                  </abbr>
+                </p>
+
                 <Link href={achievement.link} target="_blank">
                   <span>Certification</span>
                 </Link>

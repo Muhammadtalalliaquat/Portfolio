@@ -35,15 +35,17 @@ body {
 
 /* Dark theme styles */
 [data-theme="dark"] {
-  --background-color: #333;
+  
+
+  --background-color: #2a1b3d;
   --text-color: #fff;
   --primary-color: #fbc2eb;
   --secondary-color: #8a2be2;
 
-  --card-bg-color: #333;
+  --card-bg-color: #413157; 
   --card-text-color: #f9f9f9;
   --button-bg-color: #fad0c4;
-  --button-hover-bg-color: #e4a5cc;
+  --button-hover-bg-color: #e4a5cc; 
 }
 
 .main_container {

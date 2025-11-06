@@ -16,6 +16,38 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Contact({ scrollId, scrollRef }) {
   const { isDarkTheme } = useTheme();
 
+  const contactData = {
+    heading: "Get in Touch",
+    text: "I'm always excited to discuss new opportunities, innovative projects, and the latest trends in frontend development.",
+    cards: [
+      {
+        title: "Email",
+        value: "muhammadtalalliaquat@gmail.com",
+        icon: faEnvelope,
+      },
+      {
+        title: "Phone",
+        value: "+92 325 2091919",
+        icon: faPhone,
+      },
+      {
+        title: "Location",
+        value: "Karachi, Pakistan",
+        icon: faLocationDot,
+      },
+    ],
+    socials: [
+      {
+        icon: <FaGithub className={styles.icon} />,
+        link: "https://github.com/Muhammadtalalliaquat",
+      },
+      {
+        icon: <FaLinkedin className={styles.icon} />,
+        link: "https://www.linkedin.com/in/m-talalliaquat/",
+      },
+    ],
+  };
+
   return (
     <>
       <div id={scrollId} ref={scrollRef} className={styles.contactContainer}>
@@ -24,107 +56,63 @@ export default function Contact({ scrollId, scrollRef }) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
-          // className={styles.innerBox}
           className={`${styles.innerBox} ${
             isDarkTheme ? styles.dark : styles.light
           }`}
         >
-          <div className={styles.contactContainerChildren}>
-            <h1 className={styles.contactHeading}>Reach out to me!</h1>
-            <p className={styles.contactText}>
-              I’m open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision.
-            </p>
-
-            <div className={styles.iconDiv}>
-              <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
-              <p>Karachi, Pakistan</p>
+          <div className={styles.leftRightLayout}>
+            {/* Left Section - Info Cards */}
+            <div className={styles.left}>
+              {contactData.cards.map((item, index) => (
+                <div key={index} className={styles.infoCard}>
+                  <div className={styles.iconBox}>
+                    <FontAwesomeIcon icon={item.icon} />
+                  </div>
+                  <div>
+                    <h4>{item.title}</h4>
+                    <p>{item.value}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className={styles.iconDiv}>
-              <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-              <p>+92 325 2091919</p>
-            </div>
+            {/* Right Section - Text */}
+            <div className={styles.rightMainContainer}>
+              <div className={styles.right}>
+                {(() => {
+                  const headingWords = contactData.heading.split(" ");
+                  return (
+                    <h1>
+                      {headingWords.slice(0, -1).join(" ")}{" "}
+                      <span>{headingWords[headingWords.length - 1]}</span>
+                    </h1>
+                  );
+                })()}
+                <p>{contactData.text}</p>
+              </div>
 
-            <div className={styles.iconDiv}>
-              <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-              <p>muhammadtalalliaquat@gmail.com</p>
-            </div>
-
-            <div className={styles.socialDiv}>
-              <Link
-                href="https://github.com/Muhammadtalalliaquat"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className={styles.icon} />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/m-talalliaquat/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className={styles.icon} />
-              </Link>
-              {/* <a
-                href="https://twitter.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter className={styles.icon} />
-              </a> */}
+              <div className={styles.socialSection}>
+                <h4>Connect with me</h4>
+                <div className={styles.socialDiv}>
+                  {contactData.socials.map((social, index) => (
+                    <Link
+                      key={index}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {social.icon}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
-
-        {/* Signature */}
       </div>
       <p className={styles.signature}>
         Made By <span>Talal Liaquat.</span>All Rights Reserved.
       </p>
-
-      {/* <div className={styles.contactContainer} id={scrollId} ref={scrollRef}>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className={styles.contactContainerChildren}>
-            <div>
-              <h1 className={styles.contactHeading}>Reach out to me!</h1>
-              <p className={styles.contactText}>
-                I am open to discussing new projects, creative ideas, or
-                opportunities to be part of your vision.
-              </p>
-              <div className={styles.iconDiv}>
-                <FontAwesomeIcon className={styles.icon} icon={faLocationDot} />
-                <p>Karachi, Pakistan</p>
-              </div>
-              <div className={styles.iconDiv}>
-                <FontAwesomeIcon className={styles.icon} icon={faPhone} />
-                <p>+923252091919</p>
-              </div>
-              <div className={styles.iconDiv}>
-                <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-                <p>muhammadtalalliaquat@gmail.com</p>
-              </div>
-              <div className={styles.iconDiv}>
-                <Icon />
-              </div>
-            </div>
-            <div>
-              <Image
-                className={styles.imageDiv}
-                src="https://i.postimg.cc/0yHgk2W5/my-pic-removebg-preview.png"
-                alt="Profile Picture"
-                width={300}
-                height={300}
-              />
-            </div>
-          </div>
-        </motion.div>
-      </div> */}
     </>
   );
 }
