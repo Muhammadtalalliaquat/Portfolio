@@ -51,6 +51,12 @@ export default function Contact({ scrollId, scrollRef }) {
   return (
     <>
       <div id={scrollId} ref={scrollRef} className={styles.contactContainer}>
+        <h1>Contact us</h1>
+        <div className={styles.lines}>
+          <div></div>
+          <div className={styles.center_line}></div>
+          <div></div>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

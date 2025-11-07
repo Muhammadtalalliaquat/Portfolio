@@ -90,7 +90,7 @@ type skillDataType = {
 export const skillData: skillDataType[] = [
   { id: 3, name: "React.js and Next.js" },
   { id: 2, name: "JavaScript (ES6) TypeScript" },
-  { id: 1, name: "HTML, CSS" },
+  { id: 1, name: "HTML, CSS, Tailwind" },
   { id: 7, name: "Node.js" },
   { id: 8, name: "Express.js" },
   { id: 4, name: "Responsive Design (Flexbox)" },

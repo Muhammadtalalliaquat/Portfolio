@@ -7,6 +7,7 @@
   --text-color: #333;
   --primary-color: #8a2be2;
   --secondary-color: #f7d8d0;
+  --border: #333;
 
   --card-bg-color: #f9f9f9;
   --card-text-color: #333;
@@ -41,6 +42,7 @@ body {
   --text-color: #fff;
   --primary-color: #fbc2eb;
   --secondary-color: #8a2be2;
+  --border: #a7a7a7;
 
   --card-bg-color: #413157; 
   --card-text-color: #f9f9f9;

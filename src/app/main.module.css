@@ -1,40 +1,40 @@
 /* Abou section styling */
 
 .about_container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
   color: var(--text-color);
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
 }
 
 .about_container h1 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 25px;
-  font-weight: bold;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .lines {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 12px;
+  margin-bottom: 25px;
 }
 
 .lines div {
   width: 12px;
   height: 12px;
-  background: rgba(85, 85, 85, 0.6);
   border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+  background: rgba(85, 85, 85, 0.5);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
 }
 
 .lines div:hover {
   transform: scale(1.2);
-  background: rgba(138, 43, 226, 0.8);
+  background: #8a2be2;
 }
 
 .lines .center_line {
@@ -42,159 +42,152 @@
   box-shadow: 0 4px 10px rgba(138, 43, 226, 0.6);
 }
 
-.heading {
-  font-weight: bold;
+/* --- Layout --- */
+.infoWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
 }
 
-.about_container p {
-  margin-top: 20px;
-  margin-bottom: 15px;
+.leftSide {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.rightSide {
+  flex: 1 1 40%;
+}
+
+.aboutText {
+  font-size: 1rem;
   color: var(--text-color);
   text-align: justify;
+  line-height: 1.7;
+  background: var(--card-bg-color);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.infoContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  margin-top: 30px;
+.aboutText span {
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
+/* --- Modern Card --- */
 .contanerDiv {
   position: relative;
-  border-radius: 12px;
-  width: 100%;
-  padding: 30px;
-
+  border-radius: 14px;
   background: var(--card-bg-color);
-  color: var(--card-text-color);
-  opacity: 0.9;
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s ease;
-  overflow: hidden;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contanerDiv::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(
-    135deg,
-    rgba(138, 43, 226, 0.2),
-    rgba(250, 208, 196, 0.2),
-    rgba(251, 194, 235, 0.2)
-  );
-  z-index: 0;
-  opacity: 0.5;
-  transition: opacity 0.4s ease;
+.heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+  /* color: #8a2be2; */
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
 }
 
-.contanerDiv:hover {
-  background: var(--card-hover-bg-color);
-  opacity: 1;
-  transform: translateY(-5px);
-}
-
-.contanerDiv:hover::before {
-  opacity: 0.8;
-}
-
-/* ✅ Keep inner content above the gradient */
-.contanerDiv > * {
-  position: relative;
-  z-index: 1;
-}
-
-.skills_list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* --- Education --- */
+.education_section {
   margin-top: 12px;
 }
 
-.skills_list li {
-  margin-bottom: 10px;
-  font-size: 1em;
-  position: relative;
-  padding-left: 20px;
-}
-
-.skills_list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #4caf50;
-  font-weight: bold;
-}
-
-.education_section {
-  margin-top: 10px;
-}
-
 .education_item {
-  margin-bottom: 20px;
+  /* background: rgba(138, 43, 226, 0.05); */
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
+}
+
+.education_item:hover {
+  /* background: rgba(222, 204, 240, 0.1); */
+  transform: translateX(3px);
 }
 
 .education_item h2 {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  /* color: var(--text-color); */
 }
 
-.education_item p {
-  margin: 0;
-  font-size: 1rem;
-  color: var(--text-color);
-}
-
+.education_item p,
 .education_item strong {
-  font-size: 1rem;
-  color: #4caf50;
+  font-size: 0.95rem;
+  color: var(--text-color);
 }
 
+/* --- Skills --- */
+.skills_list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.skills_list li {
+  /* background: rgba(138, 43, 226, 0.1); */
+  /* background: #8a2be2; */
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  /* color: #8a2be2; */
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.skills_list li:hover {
+  /* background: #8a2be2; */
+  color: var(--text-color);
+
+  /* color: #fff; */
+  transform: scale(1.05);
+}
+
+/* --- Resume --- */
 .reusmeDiv {
   text-align: center;
-  padding: 30px;
-  margin-top: 35px;
+  margin-top: 50px;
+  padding: 35px;
+  border-radius: 14px;
   background: var(--card-bg-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.reusmeDiv p {
-  text-align: center;
-}
-/* .dark {
-  background-color: #424242;
-} */
-
-/* Resume Link Button */
 .resume_link {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #8a2be2;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
+  display: inline-block;
   margin-top: 15px;
-  transition: background-color 0.3s ease;
+  background: #8a2be2;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .resume_link:hover {
-  background-color: #6c1fb4;
+  background: #6d1fd6;
+  transform: scale(1.05);
 }
 
-.resume_link svg {
-  margin-right: 8px;
-}
 
-.resume_link:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-}
+/* --- Achievements Section --- */
 
 .achievements {
   width: 100%;
@@ -288,6 +281,13 @@
   margin: 0 auto;
 }
 
+.contactContainer h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
 .innerBox {
   background: var(--card-bg-color);
   padding: 40px;
@@ -332,9 +332,11 @@
 
 .iconBox {
   background: blueviolet;
-  padding: 14px;
-  border-radius: 10px;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 10px;
   font-size: 20px;
 }
 
@@ -459,9 +461,42 @@
   .socialDiv {
     justify-content: center;
   }
+
+   .infoWrapper {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .leftSide,
+  .rightSide {
+    flex: 1 1 100%;
+  }
+
+  .aboutText {
+    font-size: 0.95rem;
+    padding: 20px;
+  }
+
+  .contanerDiv {
+    padding: 20px;
+  }
+
+  .skills_list li {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .education_item h2 {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .contactContainer h1 {
+    font-size: 1.6rem;
+    color: var(--text-color);
+  }
+
   .innerBox {
     padding: 25px;
   }
@@ -505,20 +540,38 @@
     align-items: center;
   } */
 
-  .about_container p {
-    font-size: 1rem;
+   .about_container {
+    padding: 25px 15px;
   }
+
   .about_container h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
-  .skills_list li {
-    font-size: 1rem;
+  .lines {
+    gap: 8px;
+    margin-bottom: 20px;
   }
 
-  .education_item h3 {
-    font-size: 1rem;
+  .aboutText {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
   }
+
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .resume_link {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .reusmeDiv {
+    padding: 25px;
+  }
+  
   .infoContainer {
     display: flex;
     flex-direction: column;
@@ -539,7 +592,7 @@
   }
   .achievements h1 {
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 20px;
     color: var(--text-color);

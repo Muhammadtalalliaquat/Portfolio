@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./../components/main.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "./../context/themeContext";
 import Image from "next/image";
 
@@ -10,14 +10,20 @@ function Navbar({ onScroll, sections }) {
   const { isDarkTheme, themeToggle } = useTheme();
   const [selected, setSelected] = useState("");
 
+  useEffect(() => {
+    if (isDarkTheme) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDarkTheme]);
+
   const handleClick = (sectionName, ref) => {
     setSelected(sectionName);
     onScroll(ref);
   };
 
-  const toggleMenubar = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenubar = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <div
@@ -111,8 +117,42 @@ function Navbar({ onScroll, sections }) {
             <span>Contact</span>
           </li>
 
-          <li>
-            <label className="swap swap-rotate">
+          <li className={styles.themeToggleLi}>
+            <button
+              onClick={() => themeToggle(!isDarkTheme)}
+              className="relative w-16 h-8 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full transition-colors duration-500 shadow-inner"
+            >
+              {/* Circle toggle thumb */}
+              <span
+                className={`absolute left-1 top-1 w-6 h-6 bg-white dark:bg-yellow-400 rounded-full shadow-md transform transition-transform duration-500 ${
+                  isDarkTheme ? "translate-x-8 rotate-180" : "translate-x-0"
+                }`}
+              ></span>
+
+              {/* Sun icon (Light mode) */}
+              <svg
+                className={`absolute left-2 w-4 h-4 text-yellow-400 transition-opacity duration-500 ${
+                  isDarkTheme ? "opacity-0" : "opacity-100"
+                }`}
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 4.5a1 1 0 0 1 1-1V2a1 1 0 0 1-2 0v1.5a1 1 0 0 1 1 1zM12 19.5a1 1 0 0 1-1 1V22a1 1 0 0 1 2 0v-1.5a1 1 0 0 1-1-1zM4.22 5.64a1 1 0 0 1 1.41 0l1.06 1.06a1 1 0 0 1-1.41 1.41L4.22 7.05a1 1 0 0 1 0-1.41zM18.31 17.73a1 1 0 0 1 1.41 0l1.06 1.06a1 1 0 1 1-1.41 1.41l-1.06-1.06a1 1 0 0 1 0-1.41zM2 12a1 1 0 0 1 1-1H4.5a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zM19.5 12a1 1 0 0 1 1-1H22a1 1 0 0 1 0 2h-1.5a1 1 0 0 1-1-1zM5.64 18.36a1 1 0 0 1 1.41 0l1.06 1.06a1 1 0 1 1-1.41 1.41L5.64 19.77a1 1 0 0 1 0-1.41zM17.73 5.64a1 1 0 0 1 1.41 0l1.06 1.06a1 1 0 0 1-1.41 1.41L17.73 7.05a1 1 0 0 1 0-1.41z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+
+              {/* Moon icon (Dark mode) */}
+              <svg
+                className={`absolute right-2 w-4 h-4 text-gray-100 transition-opacity duration-500 ${
+                  isDarkTheme ? "opacity-100" : "opacity-0"
+                }`}
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M21.64 13a1 1 0 0 0-1.05-.14A8 8 0 1 1 11.1 3.41 1 1 0 0 0 12.36 2 10 10 0 1 0 22 14.05a1 1 0 0 0-.36-1.05z" />
+              </svg>
+            </button>
+            {/* <label className="swap swap-rotate">
               <input
                 type="checkbox"
                 className="theme-controller"
@@ -138,7 +178,7 @@ function Navbar({ onScroll, sections }) {
               >
                 <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
               </svg>
-            </label>
+            </label> */}
           </li>
         </ul>
       </div>
