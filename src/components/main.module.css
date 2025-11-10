@@ -160,7 +160,7 @@
     transform: translateY(120px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     position: absolute;
-    top: 60px;
+    top: 53px;
     right: 0;
     background: var(--background-color);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
