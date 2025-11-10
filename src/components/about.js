@@ -17,7 +17,7 @@ export default function About({ scrollId, scrollRef }) {
           <div className={styles.center_line}></div>
           <div></div>
         </div>
-    
+
         <div className={styles.infoWrapper}>
           {/* Left side: About + Education */}
           <motion.div
@@ -32,12 +32,6 @@ export default function About({ scrollId, scrollRef }) {
               about building clean, user-friendly, and innovative web
               applications. I love turning ideas into seamless digital
               experiences.
-              {/* Hi, I&apos;m <span>Talal</span> — a passionate web developer
-              focused on crafting user-friendly designs and seamless
-              experiences. I specialize in front-end technologies and love
-              exploring modern tools to build innovative web applications.
-              Constantly learning and growing, I aim to tackle challenges and
-              create meaningful solutions. */}
             </p>
 
             <div className={styles.contanerDiv}>
@@ -62,11 +56,11 @@ export default function About({ scrollId, scrollRef }) {
 
           {/* Right side: Skills */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.2 }}
-            className={styles.rightSide}
+            className={`${styles.rightSide}`}
           >
             <div className={styles.contanerDiv}>
               <h2 className={styles.heading}>Skills</h2>
@@ -81,6 +75,7 @@ export default function About({ scrollId, scrollRef }) {
 
         {/* Resume Section */}
         <motion.div
+          // className="w-full"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
