@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -35,8 +35,12 @@
     ".next/types/**/*.ts",
     "src/app/achievement/page.tsx",
     "src/app/contact/page.tsx",
-    "src/app/portfolio/page.tsx"
-, "src/components/Contact.js", "src/components/achievement.js", "src/components/about.js"  ],
+    "src/app/portfolio/page.tsx",
+    "src/components/Contact.js",
+    "src/components/achievement.js",
+    "src/components/about.js",
+    ".next/dev/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
