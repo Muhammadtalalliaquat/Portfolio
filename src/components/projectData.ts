@@ -1,10 +1,9 @@
-
 export type projectsDataTyoe = {
   name: string;
   description: string;
   url: string;
   id: number;
-  technologies: string[]; 
+  technologies: string[];
 };
 
 export type colorsDataTyoe = {
@@ -18,50 +17,50 @@ export type colorsDataTyoe = {
 export const techColors: { [key: string]: string } = {
   javascript: "yellow",
   typescript: "blue",
-  react: "cyan", 
-  html: "red", 
-  css: "green", 
+  react: "cyan",
+  html: "red",
+  css: "green",
 };
 
 export const projectsData: projectsDataTyoe[] = [
+  {
+    name: "NexServ",
+    description:
+      "NexServ is a modern digital service platform that helps businesses grow through high-quality web development, UI/UX design, and scalable online solutions. We focus on performance, security, and user-friendly experiences that deliver real results.",
+    url: "https://nexserv.vercel.app/",
+    technologies: ["Next.js", "Javascript"],
+    id: 1,
+  },
   {
     name: "Fashion Store",
     description:
       "Built with the MERN stack, this fashion store delivers a smooth, full-stack shopping experience from product discovery to checkout.",
     url: "https://frontend-fashion-store-web-app.vercel.app/",
-    technologies: ["Javascript"],
-    id: 1,
+    technologies: ["Next.js", "Javascript"],
+    id: 2,
   },
   {
     name: "Chat Web App",
     description:
       "A real-time chat web app using WebSockets for instant messaging. Users can send and receive messages seamlessly, with messages stored in a database for persistence.",
     url: "https://next-js-chat-app-project.vercel.app/",
-    technologies: ["Javascript"],
-    id: 2,
+    technologies: ["Next.js", "Javascript"],
+    id: 3,
   },
   {
     name: "Blog Post Crafted",
     description:
       "A blogging app is a platform where users can read and comment on blog posts.",
     url: "https://blogging-app-tawny.vercel.app/get-started",
-    technologies: ["Typescript"],
-    id: 3,
+    technologies: ["Next.js", "Typescript"],
+    id: 4,
   },
   {
     name: "Expense Tracker",
     description:
       "A user-friendly Expense Tracker app designed to help you easily track and manage your monthly expenses.",
     url: "https://expenses-tracker-bay-xi.vercel.app",
-    technologies: ["Typescript"],
-    id: 4,
-  },
-  {
-    name: "Temperature Converter",
-    description:
-      "Easily switch between Celsius, Fahrenheit, and Kelvin with this simple tool.",
-    url: "https://muhammadtalalliaquat.github.io/Temperature-converter-app/",
-    technologies: ["Javascript"],
+    technologies: ["Next.js", "Typescript"],
     id: 5,
   },
   // {
@@ -84,8 +83,8 @@ export const projectsData: projectsDataTyoe[] = [
 
 type skillDataType = {
   id: number;
-  name: string
-}
+  name: string;
+};
 
 export const skillData: skillDataType[] = [
   { id: 3, name: "React.js and Next.js" },
@@ -103,26 +102,24 @@ type educationDataDataType = {
   degree: string;
   institution: string;
   status: string;
-  completedYear?: number
-}
+  completedYear?: number;
+};
 
 export const educationData: educationDataDataType[] = [
   {
-      id: 1,
-      degree: "Intermediate in Computer Science",
-      institution: "Govt. Islamia Science College",
-      status: "Ongoing",
+    id: 1,
+    degree: "Intermediate in Computer Science",
+    institution: "Govt. Islamia Science College",
+    status: "Ongoing",
   },
   {
     id: 2,
     degree: "Secondary School Certificate",
     institution: "Indus Grammar School",
     completedYear: 2022,
-    status: ""
+    status: "",
   },
 ];
-
-
 
 export const achievements = [
   {

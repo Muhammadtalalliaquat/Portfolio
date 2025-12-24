@@ -151,7 +151,7 @@ export default function Portfolio() {
               >
                 <Image
                   className={styles.imageDiv}
-                  src="https://i.postimg.cc/0yHgk2W5/my-pic-removebg-preview.png"
+                  src="/my-pic.png"
                   alt="Profile Picture"
                   width={300}
                   height={300}
