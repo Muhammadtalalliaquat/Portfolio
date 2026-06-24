@@ -110,7 +110,8 @@ export const educationData: educationDataDataType[] = [
     id: 1,
     degree: "Intermediate in Computer Science",
     institution: "Govt. Islamia Science College",
-    status: "Ongoing",
+    completedYear: 2025,
+    status: "",
   },
   {
     id: 2,
