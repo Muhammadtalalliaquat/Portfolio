@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import style from "./../portfolio/main.module.css";
-import styles from "../main.module.css";
+// import styles from "../main.module.css";
 import Navbar from "@/components/navbar";
 import Proficiency from "@/app/Proficiency/skill_level";
 import { useTheme } from "@/context/themeContext";
@@ -88,6 +88,17 @@ export default function Portfolio() {
             }`}
           >
             <div className="w-full md:w-3/6 space-y-4">
+              <span className="inline-flex items-center gap-2 w-fit text-[11px] font-medium tracking-widest uppercase text-violet-600 bg-violet-50 dark:bg-violet-950/30 dark:text-violet-400 px-3 py-1 rounded-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-violet-600 dark:bg-violet-400" />
+                Open to work
+              </span>
+
+              {/* Greeting */}
+              <p className="text-sm text-gray-400 tracking-wide -mb-2">
+                Hello there
+              </p>
+
+              {/* Name */}
               <h1 className="text-3xl font-bold">
                 Hi, I&apos;m{" "}
                 <TypeAnimation
@@ -99,7 +110,7 @@ export default function Portfolio() {
                 />
               </h1>
 
-              <p className="text-yellow-600 font-semibold text-lg">
+              <p className="text-purple-500 font-semibold text-sm">
                 <TypeAnimation
                   sequence={[
                     "Web Developer",
@@ -114,7 +125,7 @@ export default function Portfolio() {
                 />
               </p>
 
-              <p className="leading-relaxed">
+              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-md">
                 MERN stack developer specializing in clean, sustainable
                 front-end code. Passionate about user-friendly design and
                 efficient web solutions, with training from{" "}
@@ -128,34 +139,44 @@ export default function Portfolio() {
 
               <div
                 id={style.acountContainer}
-                className="flex items-center gap-3 mt-4"
+                className="flex items-center gap-3 mt-1"
               >
+                <span className="text-[11px] text-gray-400 tracking-wide">
+                  Find me on
+                </span>
+                <span className="w-px h-4 bg-gray-200 dark:bg-gray-700" />
                 <Icon />
               </div>
             </div>
 
-            <div>
-              {/* <Image
-                src="https://i.ibb.co/CWvfFmr/output-onlinegiftools.gif"
-                style={{ objectFit: "cover" }}
-                alt="Development GIF"
-                width={300}
-                height={300}
-                unoptimized
-              /> */}
+            <div className="flex justify-center md:justify-end">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
                 viewport={{ once: true, amount: 0.2 }}
+                className="relative"
               >
-                <Image
-                  className={styles.imageDiv}
-                  src="/my-pic.png"
-                  alt="Profile Picture"
-                  width={300}
-                  height={300}
-                />
+                {/* Decorative ring */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full border-[10px] border-violet-100 dark:border-violet-900/30 z-0" />
+
+                {/* Photo frame */}
+                <div className="relative z-10 rounded-2xl overflow-hidden border border-violet-100 dark:border-violet-900/40 bg-violet-50 dark:bg-violet-950/10">
+                  <Image
+                    className={style.imageDiv}
+                    src="/me-picture.png"
+                    alt="Profile Picture"
+                    width={300}
+                    height={300}
+                    priority
+                  />
+
+                  {/* Available badge */}
+                  <div className="absolute bottom-3 right-3 flex items-center gap-1.5 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-md px-2.5 py-1 text-[11px] font-medium text-violet-600 dark:text-violet-400 shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    Available
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -169,28 +190,21 @@ export default function Portfolio() {
             id="projects"
             ref={projectsRef}
           >
+            {/* ── HEADING ── */}
             <h2 className={style.projectHeading}>Open Source Projects</h2>
-            <div className={style.lines}>
-              <div></div>
-              <div className={style.center_line}></div>
-              <div></div>
-            </div>
-            <br />
+
+            {/* ── GRID ── */}
             <div className={style.projectGrid}>
               {projectsData.map(
                 ({ name, description, url, technologies, id }, i) => (
                   <motion.div
                     key={name}
                     className={style.projectCard}
-                    // initial={{ opacity: 0, y: 30 }}
-                    // whileInView={{ opacity: 1, y: 0 }}
-                    // transition={{ duration: 0.4, delay: i * 0.3 ,  ease: "easeOut",}}
-                    // viewport={{ once: true, amount: 0.2 }}
-                    initial={{ opacity: 0, y: 20 }} // thoda kam movement for snappy feel
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{
-                      duration: 0.25, // short but not too harsh
-                      delay: i * 0.08, // faster stagger
+                      duration: 0.25,
+                      delay: i * 0.08,
                       ease: "easeOut",
                     }}
                     viewport={{ once: true, amount: 0.15 }}
@@ -202,53 +216,75 @@ export default function Portfolio() {
                     whileTap={{ scale: 0.97 }}
                     layout
                   >
+                    {/* Icon */}
+                    <div className={style.cardIcon}>
+                      <svg
+                        width="15"
+                        height="15"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={1.8}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
+                      </svg>
+                    </div>
+
+                    {/* Title */}
                     <h3>{name}</h3>
+
+                    {/* Description */}
                     <p>{description}</p>
 
+                    {/* Footer row */}
                     <div className={style.btn_contanier}>
+                      {/* Tech pills with color dots */}
                       <div className={style.tech_contanier}>
                         {technologies.map((tech) => (
                           <div key={tech + id}>
                             <p
                               style={{
-                                color:
-                                  techColors[tech.toLowerCase()] || "black",
                                 display: "inline-block",
-                                width: "10px",
-                                height: "10px",
+                                width: "7px",
+                                height: "7px",
                                 borderRadius: "50%",
                                 backgroundColor:
-                                  techColors[tech.toLowerCase()] || "black",
-                                margin: "0 5px",
+                                  techColors[tech.toLowerCase()] || "#CECBF6",
+                                margin: "0",
+                                flexShrink: 0,
                               }}
-                            ></p>
+                            />
                             <span>{tech}</span>
                           </div>
                         ))}
                       </div>
+
+                      {/* View button */}
                       <button className={style.viewButton}>
                         <Link
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          View Project
+                          View
                         </Link>
                       </button>
                     </div>
                   </motion.div>
-                )
+                ),
               )}
             </div>
 
-            <br />
+            {/* ── MORE PROJECTS ── */}
             <div className={style.viewMoreProjetcs}>
               <Link
                 target="_blank"
                 href="https://github.com/Muhammadtalalliaquat?tab=repositories"
               >
                 <button className={style.viewButton_readmore}>
-                  More Projects
+                  More Projects ↗
                 </button>
               </Link>
             </div>

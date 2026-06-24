@@ -51,23 +51,19 @@ export default function Contact({ scrollId, scrollRef }) {
   return (
     <>
       <div id={scrollId} ref={scrollRef} className={styles.contactContainer}>
-        <h1>Contact us</h1>
-        <div className={styles.lines}>
-          <div></div>
-          <div className={styles.center_line}></div>
-          <div></div>
-        </div>
+        {/* ── HEADING ── */}
+        <h1>Contact</h1>
+
+        {/* ── INNER CARD ── */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
-          className={`${styles.innerBox} ${
-            isDarkTheme ? styles.dark : styles.light
-          }`}
+          className={`${styles.innerBox} ${isDarkTheme ? styles.dark : styles.light}`}
         >
           <div className={styles.leftRightLayout}>
-            {/* Left Section - Info Cards */}
+            {/* LEFT — info cards */}
             <div className={styles.left}>
               {contactData.cards.map((item, index) => (
                 <div key={index} className={styles.infoCard}>
@@ -82,18 +78,12 @@ export default function Contact({ scrollId, scrollRef }) {
               ))}
             </div>
 
-            {/* Right Section - Text */}
+            {/* RIGHT — heading + text + socials */}
             <div className={styles.rightMainContainer}>
               <div className={styles.right}>
-                {(() => {
-                  const headingWords = contactData.heading.split(" ");
-                  return (
-                    <h1>
-                      {headingWords.slice(0, -1).join(" ")}{" "}
-                      <span>{headingWords[headingWords.length - 1]}</span>
-                    </h1>
-                  );
-                })()}
+                <h1>
+                  {/* {headingMain} <span>{headingAccent}</span> */}
+                </h1>
                 <p>{contactData.text}</p>
               </div>
 
@@ -116,8 +106,10 @@ export default function Contact({ scrollId, scrollRef }) {
           </div>
         </motion.div>
       </div>
+
+      {/* ── SIGNATURE ── */}
       <p className={styles.signature}>
-        Made By <span>Talal Liaquat.</span>All Rights Reserved.
+        Made by <span>Talal Liaquat.</span> All rights reserved.
       </p>
     </>
   );

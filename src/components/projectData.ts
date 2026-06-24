@@ -24,12 +24,20 @@ export const techColors: { [key: string]: string } = {
 
 export const projectsData: projectsDataTyoe[] = [
   {
+    name: "DocuCraft",
+    description:
+      "DocuCraft is a smart web app that helps users create, edit, and manage documents easily with a simple, fast, and user-friendly experience.",
+    url: "https://docu-craft-eight.vercel.app/",
+    technologies: ["Typescript", "React.js"],
+    id: 1,
+  },
+  {
     name: "NexServ",
     description:
       "NexServ is a modern digital service platform that helps businesses grow through high-quality web development, UI/UX design, and scalable online solutions. We focus on performance, security, and user-friendly experiences that deliver real results.",
     url: "https://nexserv.vercel.app/",
     technologies: ["Next.js", "Javascript"],
-    id: 1,
+    id: 2,
   },
   {
     name: "Fashion Store",
@@ -37,7 +45,7 @@ export const projectsData: projectsDataTyoe[] = [
       "Built with the MERN stack, this fashion store delivers a smooth, full-stack shopping experience from product discovery to checkout.",
     url: "https://frontend-fashion-store-web-app.vercel.app/",
     technologies: ["Next.js", "Javascript"],
-    id: 2,
+    id: 3,
   },
   {
     name: "Chat Web App",
@@ -45,7 +53,7 @@ export const projectsData: projectsDataTyoe[] = [
       "A real-time chat web app using WebSockets for instant messaging. Users can send and receive messages seamlessly, with messages stored in a database for persistence.",
     url: "https://next-js-chat-app-project.vercel.app/",
     technologies: ["Next.js", "Javascript"],
-    id: 3,
+    id: 4,
   },
   {
     name: "Blog Post Crafted",
@@ -53,7 +61,7 @@ export const projectsData: projectsDataTyoe[] = [
       "A blogging app is a platform where users can read and comment on blog posts.",
     url: "https://blogging-app-tawny.vercel.app/get-started",
     technologies: ["Next.js", "Typescript"],
-    id: 4,
+    id: 5,
   },
   {
     name: "Expense Tracker",
@@ -61,7 +69,7 @@ export const projectsData: projectsDataTyoe[] = [
       "A user-friendly Expense Tracker app designed to help you easily track and manage your monthly expenses.",
     url: "https://expenses-tracker-bay-xi.vercel.app",
     technologies: ["Next.js", "Typescript"],
-    id: 5,
+    id: 6,
   },
   // {
   //   name: "Calculation App",
@@ -71,14 +79,6 @@ export const projectsData: projectsDataTyoe[] = [
   //   technologies: ["Javascript"],
   //   id: 5,
   // },
-  {
-    name: "Web UI design",
-    description:
-      "Web UI (User Interface) design refers to the process of creating the visual elements and layout of a website or web application.",
-    url: "https://muhammadtalalliaquat.github.io/Saylani-web-page/",
-    technologies: ["Html"],
-    id: 6,
-  },
 ];
 
 type skillDataType = {

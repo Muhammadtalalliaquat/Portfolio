@@ -8,38 +8,72 @@ export default function Achievement({ scrollId, scrollRef }) {
   return (
     <>
       <div className={styles.achievements} id={scrollId} ref={scrollRef}>
-        <h1>Achievements And Certifications 🏆</h1>
-        {achievements.map((achievement, i) => (
-          <motion.div
-            key={achievement.alt}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: i * 0.1 }}
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <div key={achievement.id} className={styles.achievement_item}>
+        {/* ── HEADING ── */}
+        <h1>Achievements &amp; Certifications 🏆</h1>
+
+        {/* ── GRID ── */}
+        <div className={styles.achievementGrid}>
+          {achievements.map((achievement, i) => (
+            <motion.div
+              key={achievement.alt}
+              className={styles.achievement_item}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25, delay: i * 0.07, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.15 }}
+              whileHover={{
+                scale: 0.98,
+                transition: { duration: 0.2, ease: "easeOut" },
+              }}
+              whileTap={{ scale: 0.97 }}
+            >
+              {/* Certificate image */}
               <Image
-                width={200}
-                height={200}
+                width={400}
+                height={180}
                 alt={achievement.alt}
                 src={achievement.image}
+                style={{ width: "100%", height: "180px", objectFit: "cover" }}
               />
+
+              {/* Card footer */}
               <div className={styles.itemDvi}>
                 <p>
-                  <abbr title={achievement.title}>
-                    {achievement.title.length > 25
-                      ? `${achievement.title.slice(0, 25)}...`
+                  <abbr
+                    title={achievement.title}
+                    style={{ textDecoration: "none" }}
+                  >
+                    {achievement.title.length > 30
+                      ? `${achievement.title.slice(0, 30)}…`
                       : achievement.title}
                   </abbr>
                 </p>
 
-                <Link href={achievement.link} target="_blank">
-                  <span>Certification</span>
+                <Link
+                  href={achievement.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>
+                    View
+                    <svg
+                      width="10"
+                      height="10"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M7 17 17 7M7 7h10v10" />
+                    </svg>
+                  </span>
                 </Link>
               </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
       ;
     </>
