@@ -24,12 +24,28 @@ export const techColors: { [key: string]: string } = {
 
 export const projectsData: projectsDataTyoe[] = [
   {
+    name: "Desktop Application IPTV",
+    description:
+      "A desktop application for streaming IPTV content with a user-friendly interface.",
+    url: "https://github.com/Muhammadtalalliaquat/IPTV-desktop-application",
+    technologies: ["Electron.js", "Vite", "React.js", "Typescript"],
+    id: 1,
+  },
+  {
+    name: "SEO Analyzer",
+    description:
+      "A user-friendly SEO Analyzer app designed to help you optimize your website for search engines.",
+    url: "https://metascope-web.vercel.app/",
+    technologies: ["Javascript"],
+    id: 2,
+  },
+  {
     name: "DocuCraft",
     description:
       "DocuCraft is a smart web app that helps users create, edit, and manage documents easily with a simple, fast, and user-friendly experience.",
     url: "https://docu-craft-eight.vercel.app/",
     technologies: ["Typescript", "React.js"],
-    id: 1,
+    id: 3,
   },
   {
     name: "NexServ",
@@ -37,7 +53,7 @@ export const projectsData: projectsDataTyoe[] = [
       "NexServ is a modern digital service platform that helps businesses grow through high-quality web development, UI/UX design, and scalable online solutions. We focus on performance, security, and user-friendly experiences that deliver real results.",
     url: "https://nexserv.vercel.app/",
     technologies: ["Next.js", "Javascript"],
-    id: 2,
+    id: 4,
   },
   {
     name: "Fashion Store",
@@ -45,7 +61,7 @@ export const projectsData: projectsDataTyoe[] = [
       "Built with the MERN stack, this fashion store delivers a smooth, full-stack shopping experience from product discovery to checkout.",
     url: "https://frontend-fashion-store-web-app.vercel.app/",
     technologies: ["Next.js", "Javascript"],
-    id: 3,
+    id: 5,
   },
   {
     name: "Chat Web App",
@@ -53,24 +69,9 @@ export const projectsData: projectsDataTyoe[] = [
       "A real-time chat web app using WebSockets for instant messaging. Users can send and receive messages seamlessly, with messages stored in a database for persistence.",
     url: "https://next-js-chat-app-project.vercel.app/",
     technologies: ["Next.js", "Javascript"],
-    id: 4,
-  },
-  {
-    name: "Blog Post Crafted",
-    description:
-      "A blogging app is a platform where users can read and comment on blog posts.",
-    url: "https://blogging-app-tawny.vercel.app/get-started",
-    technologies: ["Next.js", "Typescript"],
-    id: 5,
-  },
-  {
-    name: "Expense Tracker",
-    description:
-      "A user-friendly Expense Tracker app designed to help you easily track and manage your monthly expenses.",
-    url: "https://expenses-tracker-bay-xi.vercel.app",
-    technologies: ["Next.js", "Typescript"],
     id: 6,
   },
+
   // {
   //   name: "Calculation App",
   //   description:
@@ -137,4 +138,19 @@ export const achievements = [
     alt: "cisco-networking",
     link: "https://magenta-cesya-2.tiiny.site/",
   },
+  {
+    id: 3,
+    title: "Database Management",
+    image: "/NED-Academy-Logo.png",
+    alt: "NED Academy",
+    link: "https://drive.google.com/file/d/16IK9BwgqgZEb2wZCRDL4sAy9tH2eShr7/view",
+  },
+  // {
+  //   id: 4,
+  //   title: "Web And Mobile App Development",
+  //   image:
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Rs7eLON5MfY39cwwkRJLU-Muee1bbMHsIVei1MRDxS6cwacPORa2MSA&s=10",
+  //   alt: "Saylami Mass IT Training",
+  //   link: "",
+  // },
 ];

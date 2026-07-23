@@ -37,6 +37,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "i.postimg.cc",
       },
+      // {
+      //   protocol: "https",
+      //   hostname:
+      //     "encrypted-tbn0.gstatic.com",
+      // },
     ],
   },
 };
