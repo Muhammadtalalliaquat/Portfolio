@@ -22,51 +22,47 @@ export const techColors: { [key: string]: string } = {
   css: "green",
 };
 
+const text = "This GitHub repository is private and cannot be accessed";;
+
 export const projectsData: projectsDataTyoe[] = [
   {
     name: "Desktop Application IPTV",
-    description:
-      "A desktop application for streaming IPTV content with a user-friendly interface.",
+    description: `A desktop application for streaming IPTV content with a user-friendly interface.${text}`,
     url: "https://github.com/Muhammadtalalliaquat/IPTV-desktop-application",
     technologies: ["Electron.js", "Vite", "React.js", "Typescript"],
     id: 1,
   },
   {
     name: "SEO Analyzer",
-    description:
-      "A user-friendly SEO Analyzer app designed to help you optimize your website for search engines.",
+    description: `A user-friendly SEO Analyzer app designed to help you optimize your website for search engines.`,
     url: "https://metascope-web.vercel.app/",
     technologies: ["Javascript"],
     id: 2,
   },
   {
     name: "DocuCraft",
-    description:
-      "DocuCraft is a smart web app that helps users create, edit, and manage documents easily with a simple, fast, and user-friendly experience.",
+    description: `DocuCraft is a smart web app that helps users create, edit, and manage documents easily with a simple, fast, and user-friendly experience.`,
     url: "https://docu-craft-eight.vercel.app/",
     technologies: ["Typescript", "React.js"],
     id: 3,
   },
   {
     name: "NexServ",
-    description:
-      "NexServ is a modern digital service platform that helps businesses grow through high-quality web development, UI/UX design, and scalable online solutions. We focus on performance, security, and user-friendly experiences that deliver real results.",
+    description: `NexServ is a modern digital service platform that helps businesses grow through high-quality web development, UI/UX design, and scalable online solutions. We focus on performance, security, and user-friendly experiences that deliver real results.`,
     url: "https://nexserv.vercel.app/",
     technologies: ["Next.js", "Javascript"],
     id: 4,
   },
   {
     name: "Fashion Store",
-    description:
-      "Built with the MERN stack, this fashion store delivers a smooth, full-stack shopping experience from product discovery to checkout.",
+    description: `Built with the MERN stack, this fashion store delivers a smooth, full-stack shopping experience from product discovery to checkout.`,
     url: "https://frontend-fashion-store-web-app.vercel.app/",
     technologies: ["Next.js", "Javascript"],
     id: 5,
   },
   {
     name: "Chat Web App",
-    description:
-      "A real-time chat web app using WebSockets for instant messaging. Users can send and receive messages seamlessly, with messages stored in a database for persistence.",
+    description: `A real-time chat web app using WebSockets for instant messaging. Users can send and receive messages seamlessly, with messages stored in a database for persistence.`,
     url: "https://next-js-chat-app-project.vercel.app/",
     technologies: ["Next.js", "Javascript"],
     id: 6,
@@ -75,7 +71,7 @@ export const projectsData: projectsDataTyoe[] = [
   // {
   //   name: "Calculation App",
   //   description:
-  //     "The Calculation App is a straightforward tool designed to help users perform basic arithmetic calculations with ease.",
+  //     `The Calculation App is a straightforward tool designed to help users perform basic arithmetic calculations with ease.`,
   //   url: "https://muhammadtalalliaquat.github.io/Calculation-App/",
   //   technologies: ["Javascript"],
   //   id: 5,
